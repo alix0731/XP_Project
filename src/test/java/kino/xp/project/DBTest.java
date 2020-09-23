@@ -1,12 +1,12 @@
 package kino.xp.project;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.util.Assert;
 
 import java.sql.Connection;
 
 public class DBTest
 {
+
 
     @Test
     public void testConnection()
