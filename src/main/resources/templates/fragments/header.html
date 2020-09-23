@@ -1,26 +1,28 @@
 
 
+<html xmlns:th="http://www.thymeleaf.org">
+
 <header>
+
+
+    <style>
+        li {
+            display: inline;
+        }
+
+
+    </style>
 
     <nav class="nav-header">
 
         <div banner>
-
             <ul>
-                <li class="logo-item">
-                    <img src="logo_kino_xp.png" width="200" height="100">
-
+                <li class="logo-item"> <img th:src="${images/logo_kino_xp.png}" width="200" height="100" href="/index">
                 </li>
 
-                <li class="login-item">
-
+                <li class="login-item"> <button class="login"></button>
                 </li>
-
             </ul>
-
         </div>
-
     </nav>
-
-
 </header>
