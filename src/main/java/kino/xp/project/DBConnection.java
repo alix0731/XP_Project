@@ -19,8 +19,8 @@ public class DBConnection
         if (conn != null) return conn;
         String name, pass, url;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
             url = "jdbc:mysql://den1.mysql4.gear.host:3306/kinoxp?autoReconnect=true";
+            Class.forName("com.mysql.cj.jdbc.Driver");
             name = "kinoxp";
             pass = "Vn5S7Uz_h7_W";
             conn = DriverManager.getConnection(url, name, pass);
