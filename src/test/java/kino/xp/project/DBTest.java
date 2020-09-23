@@ -9,7 +9,7 @@ public class DBTest
     public void testConnection()
     {
 
-        DBConnection db = new DBConnection();
+        //DBConnection db = new DBConnection();
 
 
     }
