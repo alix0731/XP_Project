@@ -19,4 +19,6 @@ class MovieTest {
         assertEquals("Action", test.getGenre());
         assertEquals("Robert Pattinson, Michael Caine", test.getActors());
     }
+
+
 }

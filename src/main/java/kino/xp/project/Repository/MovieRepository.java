@@ -29,6 +29,7 @@ public class MovieRepository {
     public List<Movie> listMovies() {
         String sql = "SELECT * FROM movie";
         RowMapper<Movie> rm = new BeanPropertyRowMapper<>(Movie.class);
+        System.out.println(template.query(sql, rm));
         return template.query(sql, rm);
     }
 }

@@ -35,6 +35,14 @@ public class Movie {
         this.actors = actors;
     }
 
+    public Movie(String title, int duration, int priceRank, String genre, String actors) {
+        this.title = title;
+        this.duration = duration;
+        this.priceRank = priceRank;
+        this.genre = genre;
+        this.actors = actors;
+    }
+
     public int getId() {
         return id;
     }

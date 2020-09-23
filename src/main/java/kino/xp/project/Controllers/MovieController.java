@@ -22,6 +22,7 @@ public class MovieController {
 
     @GetMapping("/CreateMovie")
     public String createMovie() {
+        movieService.listMovies();
         return "CreateMovie";
     }
 
@@ -31,6 +32,6 @@ public class MovieController {
         return "/index";
     }
 
-    @GetMapping("/ListMovies")
-    public String
+    /*@GetMapping("/ListMovies")
+    public String*/
 }
