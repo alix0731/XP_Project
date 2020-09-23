@@ -1,3 +1,4 @@
+package kino.xp.project;
 
 
 import java.sql.Connection;
@@ -18,10 +19,10 @@ public class DBConnection
         if (conn != null) return conn;
         String name, pass, url;
         try {
+            url = "jdbc:mysql://den1.mysql4.gear.host:3306/kinoxp?autoReconnect=true";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            url = "jdbc:mysql://den1.mysql5.gear.host:3306/motorhomedb?autoReconnect=true";
-            name = "motorhomedb";
-            pass = "Tw00?vT9X?C9";
+            name = "kinoxp";
+            pass = "Vn5S7Uz_h7_W";
             conn = DriverManager.getConnection(url, name, pass);
             System.out.println("Connection created");
         } catch (Exception e) {
