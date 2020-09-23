@@ -24,4 +24,7 @@ public class MovieController {
         movieService.addMovieToDatabase(movie);
         return "/index";
     }
+    
+    @GetMapping("/ListMovies")
+    public String
 }
