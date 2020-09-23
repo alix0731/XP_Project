@@ -8,8 +8,13 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
+
+/**
+ * @Author Jacqques, Daniel, Emil Andersen
+ * @Parameter kaldes fra MovieRepository som sender Movie-relateret requests
+ * @Output kontakt til database fx gem/list
+ **/
 
 @Repository
 public class MovieRepository {

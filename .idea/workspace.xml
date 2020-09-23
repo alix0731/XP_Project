@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="project initiation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KinoXP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KinoXP.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/MovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CreateMovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CreateMovie.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

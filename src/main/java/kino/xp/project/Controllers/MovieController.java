@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+/**
+ * @Author Jacqques, Daniel, Emil Andersen
+ * @Parameter controller for metoder relateret til Movie-objekter
+ * @Output sender browser til den korrekte html side og diverse metodekald
+ **/
+
 @Controller
 public class MovieController {
     @Autowired
@@ -24,7 +30,7 @@ public class MovieController {
         movieService.addMovieToDatabase(movie);
         return "/index";
     }
-    
+
     @GetMapping("/ListMovies")
     public String
 }
