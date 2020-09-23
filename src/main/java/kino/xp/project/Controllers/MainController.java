@@ -1,4 +1,4 @@
-package Controllers;
+package kino.xp.project.Controllers;
 
 
 import org.springframework.stereotype.Controller;

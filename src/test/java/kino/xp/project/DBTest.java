@@ -1,6 +1,9 @@
 package kino.xp.project;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.util.Assert;
+
+import java.sql.Connection;
 
 public class DBTest
 {
@@ -9,9 +12,12 @@ public class DBTest
     public void testConnection()
     {
 
-        DBConnection db = new DBConnection();
+        Connection conn = DBConnection.getDatabaseConnection();
 
+        if (conn==null)
+            System.out.println("Error : no connection to database");
 
+        assert conn != null;
     }
 
 
