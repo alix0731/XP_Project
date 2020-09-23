@@ -123,10 +123,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1600695725010" />
-    <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2" timestamp="1600692751697">
+    <state x="737" y="436" width="446" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1600859249879">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1600692751697" />
+    <state x="737" y="436" width="446" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.27.1920.1053@0.27.1920.1053" timestamp="1600859249879" />
+    <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2" timestamp="1600859484179">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1600859484179" />
     <state width="1878" height="277" key="GridCell.Tab.0.bottom" timestamp="1600692880498">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -163,9 +167,13 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600696036590" />
-    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600692746958">
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600859486727">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600692746958" />
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600859486727" />
+    <state x="764" y="469" width="392" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600859476323">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="764" y="469" width="392" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600859476323" />
   </component>
 </project>
