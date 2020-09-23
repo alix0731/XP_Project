@@ -15,7 +15,7 @@ public class DBTest
         Connection conn = DBConnection.getDatabaseConnection();
 
         if (conn==null)
-            System.out.println("Error : no connection to database");
+            System.out.println("Error : no connection to database. Contact Rasmus or Norsker");
 
         assert conn != null;
     }
