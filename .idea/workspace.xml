@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="project initiation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/filler" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/DBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MovieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Model/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/MovieRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/MovieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/MyCSS.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/CreateMovie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/Model/MovieTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KinoXP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KinoXP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/kino/xp/project/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/DBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -35,8 +44,16 @@
         <option name="mavenHome" value="$USER_HOME$/.m2/wrapper/dists/apache-maven-3.6.3-bin/1iopthnavndlasol9gbrbg6bf2/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1hoyJqOwdnn9zvEYnRps4OiOewq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,7 +67,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Eksamen2020" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -58,24 +78,51 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="kino.xp.project.Model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="kino.xp.project" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
+  <component name="RunManager" selected="Spring Boot.ProjectApplication">
+    <configuration name="MovieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KinoXP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kino.xp.project.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kino.xp.project.Model" />
+      <option name="MAIN_CLASS_NAME" value="kino.xp.project.Model.MovieTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieTest.canCreateMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KinoXP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kino.xp.project.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kino.xp.project.Model" />
+      <option name="MAIN_CLASS_NAME" value="kino.xp.project.Model.MovieTest" />
+      <option name="METHOD_NAME" value="canCreateMovie" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,8 +134,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MovieTest.canCreateMovie" />
+        <item itemvalue="JUnit.MovieTest" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="" />
@@ -119,49 +175,82 @@
     <option name="LAST_COMMIT_MESSAGE" value="project initiation" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1600861683802">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1600861683802" />
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600695725010">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1600695725010" />
-    <state x="737" y="436" width="446" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1600859249879">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1600862463355">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600862463355" />
+    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1600860321050">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1600860321050" />
+    <state x="421" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600860926274">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="421" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1600860926274" />
+    <state x="590" y="320" width="403" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1600860927414">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="590" y="320" width="403" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1600860927414" />
     <state x="737" y="436" width="446" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.27.1920.1053@0.27.1920.1053" timestamp="1600859249879" />
+    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600862360130">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1600862360130" />
     <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2" timestamp="1600859484179">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1600859484179" />
-    <state width="1878" height="277" key="GridCell.Tab.0.bottom" timestamp="1600692880498">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600860219346">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600860219346" />
+    <state width="1493" height="262" key="GridCell.Tab.0.bottom" timestamp="1600863139748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600863139748" />
     <state width="1878" height="277" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880498" />
-    <state width="1878" height="277" key="GridCell.Tab.0.center" timestamp="1600692880498">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1493" height="262" key="GridCell.Tab.0.center" timestamp="1600863139747">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600863139747" />
     <state width="1878" height="277" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880498" />
-    <state width="1878" height="277" key="GridCell.Tab.0.left" timestamp="1600692880498">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1493" height="262" key="GridCell.Tab.0.left" timestamp="1600863139747">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600863139747" />
     <state width="1878" height="277" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880498" />
-    <state width="1878" height="277" key="GridCell.Tab.0.right" timestamp="1600692880498">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1493" height="262" key="GridCell.Tab.0.right" timestamp="1600863139747">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600863139747" />
     <state width="1878" height="277" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880498" />
-    <state width="1878" height="277" key="GridCell.Tab.1.bottom" timestamp="1600692880499">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1493" height="262" key="GridCell.Tab.1.bottom" timestamp="1600863139748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600863139748" />
     <state width="1878" height="277" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880499" />
-    <state width="1878" height="277" key="GridCell.Tab.1.center" timestamp="1600692880499">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1493" height="262" key="GridCell.Tab.1.center" timestamp="1600863139748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1600863139748" />
     <state width="1878" height="277" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880499" />
-    <state width="1878" height="277" key="GridCell.Tab.1.left" timestamp="1600692880499">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1493" height="262" key="GridCell.Tab.1.left" timestamp="1600863139748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1600863139748" />
     <state width="1878" height="277" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880499" />
-    <state width="1878" height="277" key="GridCell.Tab.1.right" timestamp="1600692880499">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1493" height="262" key="GridCell.Tab.1.right" timestamp="1600863139748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1600863139748" />
     <state width="1878" height="277" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600692880499" />
     <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1600696036590">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -175,5 +264,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="764" y="469" width="392" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600859476323" />
+    <state x="533" y="129" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600861145815">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="533" y="129" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1600861145815" />
   </component>
 </project>
