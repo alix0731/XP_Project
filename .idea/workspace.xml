@@ -4,40 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="project initiation">
-      <change afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/Repository/MovieRepositoryTest.java" afterDir="false" />
+    <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KinoXP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KinoXP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kino/xp/project/Model/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/Model/MovieTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/kino/xp/project/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/DBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,14 +33,11 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\emiln\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+        <option name="mavenHome" value="$USER_HOME$/.m2/wrapper/dists/apache-maven-3.6.3-bin/1iopthnavndlasol9gbrbg6bf2/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="1hoyJqOwdnn9zvEYnRps4OiOewq" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,8 +51,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -83,18 +59,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="kino.xp.project.Repository" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="kino.xp.project" />
       <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -102,8 +69,22 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="kino.xp.project" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.MovieRepositoryTest.canAddMovieToDatabase">
+  <component name="RunManager" selected="JUnit.DBTest.testConnection">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DBTest.testConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KinoXP" />
       <extension name="coverage">
@@ -120,46 +101,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieRepositoryTest.canAddMovieToDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="KinoXP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kino.xp.project.Repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kino.xp.project.Repository" />
-      <option name="MAIN_CLASS_NAME" value="kino.xp.project.Repository.MovieRepositoryTest" />
-      <option name="METHOD_NAME" value="canAddMovieToDatabase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="KinoXP" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="kino.xp.project.ProjectApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.DBTest.testConnection" />
-      <item itemvalue="JUnit.MovieRepositoryTest.canAddMovieToDatabase" />
-      <item itemvalue="Spring Boot.ProjectApplication" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MovieRepositoryTest.canAddMovieToDatabase" />
         <item itemvalue="JUnit.DBTest.testConnection" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="" />
@@ -171,7 +126,6 @@
       <workItem from="1600692497863" duration="1572000" />
       <workItem from="1600772747278" duration="9000" />
       <workItem from="1600859086049" duration="3189000" />
-      <workItem from="1600866355240" duration="3004000" />
     </task>
     <task id="LOCAL-00001" summary="project initiation">
       <created>1600691932785</created>
@@ -240,18 +194,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="project initiation" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600865181688">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600865181688" />
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600695725010">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1600695725010" />
-    <state x="558" y="76" key="#com.intellij.ide.util.MemberChooser" timestamp="1600867268500">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="558" y="76" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1600867268500" />
     <state x="607" y="479" width="715" height="155" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600859826756">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -264,53 +210,37 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1600863787531" />
-    <state width="1545" height="207" key="GridCell.Tab.0.bottom" timestamp="1600869390825">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="234" key="GridCell.Tab.0.bottom" timestamp="1600863376425">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600865695956" />
-    <state width="1545" height="207" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1600869390825" />
     <state width="1878" height="234" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
-    <state width="1545" height="207" key="GridCell.Tab.0.center" timestamp="1600869390824">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="234" key="GridCell.Tab.0.center" timestamp="1600863376425">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600865695955" />
-    <state width="1545" height="207" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1600869390824" />
     <state width="1878" height="234" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
-    <state width="1545" height="207" key="GridCell.Tab.0.left" timestamp="1600869390824">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="234" key="GridCell.Tab.0.left" timestamp="1600863376424">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600865695954" />
-    <state width="1545" height="207" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1600869390824" />
     <state width="1878" height="234" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376424" />
-    <state width="1545" height="207" key="GridCell.Tab.0.right" timestamp="1600869390824">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="234" key="GridCell.Tab.0.right" timestamp="1600863376425">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600865695955" />
-    <state width="1545" height="207" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1600869390824" />
     <state width="1878" height="234" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
-    <state width="1545" height="207" key="GridCell.Tab.1.bottom" timestamp="1600869390820">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="342" key="GridCell.Tab.1.bottom" timestamp="1600860735626">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600865695958" />
-    <state width="1545" height="207" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1600869390820" />
     <state width="1878" height="342" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735626" />
-    <state width="1545" height="207" key="GridCell.Tab.1.center" timestamp="1600869390819">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="342" key="GridCell.Tab.1.center" timestamp="1600860735625">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1600865695957" />
-    <state width="1545" height="207" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1600869390819" />
     <state width="1878" height="342" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735625" />
-    <state width="1545" height="207" key="GridCell.Tab.1.left" timestamp="1600869390819">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="342" key="GridCell.Tab.1.left" timestamp="1600860735624">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1600865695957" />
-    <state width="1545" height="207" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1600869390819" />
     <state width="1878" height="342" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735624" />
-    <state width="1545" height="207" key="GridCell.Tab.1.right" timestamp="1600869390820">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1878" height="342" key="GridCell.Tab.1.right" timestamp="1600860735625">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1600865695958" />
-    <state width="1545" height="207" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1600869390820" />
     <state width="1878" height="342" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735625" />
     <state x="775" y="267" width="359" height="580" key="RollbackChangesDialog" timestamp="1600859681094">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -324,29 +254,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600863793511" />
-    <state x="637" y="361" width="446" height="211" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600866640422">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="764" y="469" width="392" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600864535934">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="637" y="361" width="446" height="211" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1600866640422" />
     <state x="764" y="469" width="392" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600864535934" />
-    <state x="516" y="197" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600866959063">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="516" y="197" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1600.860@0.0.1600.860" timestamp="1600866959063" />
-    <state x="379" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1600868193339">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="379" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1600868193339" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/kino/xp/project/Repository/MovieRepositoryTest.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
