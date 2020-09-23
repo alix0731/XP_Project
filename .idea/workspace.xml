@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/kino/xp/project/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/DBTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,17 +55,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="kino.xp.project" />
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="kino.xp.project" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
