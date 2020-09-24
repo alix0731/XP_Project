@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MovieRepositoryTest {
-    @RunWith(SpringJUnit4ClassRunner)
+    //@RunWith(SpringJUnit4ClassRunner)
     @Autowired
     MovieService ms;
     @Test
