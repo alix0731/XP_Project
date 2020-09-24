@@ -54,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -121,7 +121,7 @@
       <workItem from="1600692497863" duration="1572000" />
       <workItem from="1600772747278" duration="9000" />
       <workItem from="1600859086049" duration="3189000" />
-      <workItem from="1600900214786" duration="838000" />
+      <workItem from="1600900214786" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="project initiation">
       <created>1600691932785</created>

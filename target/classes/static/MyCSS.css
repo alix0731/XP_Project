@@ -1,0 +1,16 @@
+#createForm {
+    width: 300px;
+    text-align: right;
+}
+#saveButton{
+    height: 25px;
+    width: 65px;
+    background-color: lightgreen;
+    margin-bottom: 5px;
+}
+#backButton{
+    height: 25px;
+    width: 65px;
+    background-color: lightpink;
+    margin-bottom: 5px;
+}
