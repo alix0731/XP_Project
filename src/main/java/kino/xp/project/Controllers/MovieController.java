@@ -1,4 +1,4 @@
-package kino.xp.project.Controllers;
+package kino.xp.project.controllers;
 
 import kino.xp.project.Model.Movie;
 import kino.xp.project.Service.MovieService;

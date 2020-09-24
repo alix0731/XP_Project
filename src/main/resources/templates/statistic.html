@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>KinoXp</title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <link th:href="@{homeStyle.css}" rel="stylesheet"/>
+    <link th:href="@{style.css}" rel="stylesheet"/>
 
     <style>
         body{
@@ -32,20 +32,18 @@
     </style>
 
 </head>
-<body style="background-color: black">
+<body>
 
 <header>
     <div class="container">
         <div class="row">
-            <div id="logo" style="padding: 10px">
+            <div id="logo">
                 <img th:src="kino.png" alt="KinoLogo">
             </div>
 
-            <!--
-            <div class="col-md-4 col-12 button">
-                <a href="#" class="btn btn-dark">Sign out</a>
-            </div>
-            -->
+<!--            <div class="col-md-4 col-12 button">-->
+<!--                <a href="/" class="btn btn-dark">Sign out</a>-->
+<!--            </div>-->
 
         </div>
     </div>
@@ -59,7 +57,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <div th:insert="fragments/login :: loginBtn"></div>
+                        <a class="nav-link" href="/">Log ud<span class="sr-only">(current)</span></a>
                     </li>
 
                 </ul>
@@ -77,72 +75,39 @@
         <hr/>
         <div class="row justify-content-center">
 
-            <span class="services" style="padding: 30px">
+            <span class="services">
                 <img width="200" height="300" src="tent.jpg" alt="MoviePoster">
                 <h5>Tenet: Premiere</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:48m</p>
-                <p>Genre: Thriller</p>
+                <p>Solgte billetter: 76</p>
                 <p>Pris: 75-95 kr</p>
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
             </span>
-            <span class="services" style="padding: 30px">
+            <span class="services">
                 <img width="200" height="300" src="afterposter.jpg" alt="MoviePoster">
                 <h5>After</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:28m</p>
-                <p>Genre: Horror</p>
+                <p>Solgte billetter: 35</p>
                 <p>Pris: 65-95 kr</p>
-
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
             </span>
 
-            <span class="services" style="padding: 30px">
+            <span class="services">
                 <img width="200" height="300" src="underwater.jpg" alt="MoviePoster">
                 <h5>Underwater</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 2t:21m</p>
-                <p>Genre: Action</p>
+                <p>Solgte billetter: 57</p>
                 <p>Pris: 65-95 kr</p>
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
             </span>
 
-            <span class="services" style="padding: 30px">
+            <span class="services">
                 <img width="200" height="300" src="call-poster.jpg" alt="MoviePoster">
                 <h5>Call of the wild</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:58m</p>
-                <p>Genre: Sci-Fi</p>
+                <p>Solgte billetter: 23</p>
                 <p>Pris: 65-95 kr</p>
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
             </span>
         </div>
     </div>
-
-
 </main>
-
 
 <footer>
 
 </footer>
-
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

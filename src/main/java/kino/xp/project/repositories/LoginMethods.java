@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class LoginMethods {
 
-    String testUser = "Wrong";
-    String testPass = "Wrong";
+    String testUser = "Admin";
+    String testPass = "Admin";
     HashMap<String, String> testMap = new HashMap<>();
 
     public LoginMethods(){
