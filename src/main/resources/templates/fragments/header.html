@@ -2,27 +2,28 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
-<header>
 
+    <div class="banner" th:fragment="header">
+        <ul>
+            <li class="logo-item"> <img th:src="kino.png" width="80%" height="20%" href="/index">
+            </li>
+            <li class="login-item">
+                <div th:replace="fragments/login :: loginBtn" width="80%" height="20%">
 
-    <style>
-        li {
-            display: inline;
-        }
-
-
-    </style>
-
-    <nav class="nav-header">
-
-        <div banner>
-            <ul>
-                <li class="logo-item"> <img th:src="${images/logo_kino_xp.png}" width="200" height="100" href="/index">
-                </li>
-
-                <li class="login-item"> <button class="login"></button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+                </div>
+            </li>
+        </ul>
+        <style>
+            .banner{
+                display: inline;
+                line: center;
+                width: 70%;
+                height: 25%;}
+            li{
+                display: inline-block;}
+            .logo-item{
+                float: left;}
+            .login-item{
+                float: right;}
+        </style>
+    </div>

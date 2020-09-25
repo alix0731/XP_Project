@@ -20,42 +20,8 @@
 </head>
 <body style="background-color: black">
 
-<header>
-    <div class="container">
-        <div class="row">
-            <div id="logo" style="padding: 10px">
-                <img th:src="kino.png" alt="KinoLogo">
-            </div>
-
-            <!--
-            <div class="col-md-4 col-12 button">
-                <a href="#" class="btn btn-dark">Sign out</a>
-            </div>
-            -->
-
-        </div>
-    </div>
-
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0d0d0d">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <div th:insert="fragments/login :: loginBtn"></div>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-
+<header th:replace="fragments/header :: header">
 </header>
-
 
 <main>
 
