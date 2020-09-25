@@ -4,14 +4,15 @@ import kino.xp.project.Model.Movie;
 import kino.xp.project.Service.MovieService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest
 class MovieRepositoryTest {
-    //@RunWith(SpringJUnit4ClassRunner)
     @Autowired
     MovieService ms;
     @Test
