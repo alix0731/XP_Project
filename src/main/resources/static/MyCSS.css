@@ -16,9 +16,7 @@
 }
 
 #row {
-    padding-left: 2%;
-    padding-right: 2%;
-    box-shadow: 0 0 1pt 2pt red;
+    padding-left: 4vw;
 }
 
 .footy{
@@ -28,12 +26,5 @@
 }
 
 #right{
-    padding-left:3px;
-}
-
-
-#centralize
-{
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left:4vw;
 }
