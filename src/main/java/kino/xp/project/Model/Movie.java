@@ -90,4 +90,16 @@ public class Movie {
     public void setActors(String actors) {
         this.actors = actors;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", duration=" + duration +
+                ", priceRank=" + priceRank +
+                ", genre='" + genre + '\'' +
+                ", actors='" + actors + '\'' +
+                '}';
+    }
 }

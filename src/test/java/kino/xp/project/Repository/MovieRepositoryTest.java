@@ -21,25 +21,19 @@ class MovieRepositoryTest {
 
         int sizeOfTable = ms.listMovies().size();
 
-        List<Movie> list = ms.listMovies();
-
         assertTrue(ms.addMovieToDatabase(movie));
 
-        assertTrue(sizeOfTable < ms.listMovies().size());
+        List<Movie> list = ms.listMovies();
+
+        assertTrue(sizeOfTable < list.size());
     }
 
-  /*  @Test
+    @Test
     public void canReadMovieFromDatabase(){
-
-        MovieRepository mr = new MovieRepository();
-
-        for(Movie movie: mr.listMovies()){
-            if(movie.getTitle().equals("Shrek 32")){
+        for(Movie m: ms.listMovies()){
+            if(m.getTitle().equals("Shrek 32")){
                 assertTrue(true);
-                return;
             }
         }
-        assertTrue(false);
     }
-*/
 }
