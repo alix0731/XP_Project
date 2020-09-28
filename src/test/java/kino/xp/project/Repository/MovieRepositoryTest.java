@@ -17,7 +17,7 @@ class MovieRepositoryTest {
     MovieService ms;
     @Test
     public void canAddMovieToDatabase(){
-        Movie movie = new Movie("Shrek 32", 90, 2, "Romantic horror", "Eddie Murphy");
+        Movie movie = new Movie("Shrek 32", 90, 2, "Romantic horror", "Eddie Murphy", "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/tenet2020.ar_509x.jpg?v=1578062934");
 
         int sizeOfTable = ms.listMovies().size();
 

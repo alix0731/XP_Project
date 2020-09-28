@@ -93,5 +93,5 @@ public class Movie {
         return poster;
     }
 
-    public void setPoster(String poster) {this.poster = poster}
+    public void setPoster(String poster) {this.poster = poster;}
 }

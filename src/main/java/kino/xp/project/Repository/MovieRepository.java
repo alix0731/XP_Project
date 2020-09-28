@@ -22,8 +22,8 @@ public class MovieRepository {
     JdbcTemplate template;
 
     public boolean addMovieToDatabase(Movie m) {
-        String sql = "INSERT INTO movie (title, duration, price_rank, actors, genre) VALUES (?, ?, ?, ?, ?)";
-        return (template.update(sql, m.getTitle(), m.getDuration(), m.getPriceRank(), m.getActors(), m.getGenre()) > 0);
+        String sql = "INSERT INTO movie (title, duration, price_rank, actors, genre, poster) VALUES (?, ?, ?, ?, ?, ?)";
+        return (template.update(sql, m.getTitle(), m.getDuration(), m.getPriceRank(), m.getActors(), m.getGenre(), m.getPoster()) > 0);
     }
 
     public List<Movie> listMovies() {
