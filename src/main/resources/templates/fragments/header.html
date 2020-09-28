@@ -5,21 +5,27 @@
 
     <div class="banner" th:fragment="header">
         <ul>
-            <li class="logo-item"> <img th:src="kino.png" width="80%" height="20%" href="/index">
+            <li class="logo-item"> <img th:src="kino.png" width="180vw" height="60vh" href="/index">
             </li>
             <li class="login-item">
-                <div th:replace="fragments/login :: loginBtn" width="80%" height="20%">
+                <div th:replace="fragments/login :: loginBtn" width="10vw" height="5vh">
 
                 </div>
             </li>
         </ul>
         <style>
             .banner{
+                top: 10vh;
+                left: 30vw;
                 display: inline;
-                line: center;
-                width: 70%;
-                height: 25%;}
+                width: 100vw;
+                height: 20vh;}
+            ul{
+                padding: 8vw;
+                width: 95vw;
+                height: 10vh;}
             li{
+                padding-left: 2vw;
                 display: inline-block;}
             .logo-item{
                 float: left;}
