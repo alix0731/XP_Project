@@ -4,14 +4,15 @@ import kino.xp.project.Model.Movie;
 import kino.xp.project.Service.MovieService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest
 class MovieRepositoryTest {
-    //@RunWith(SpringJUnit4ClassRunner)
     @Autowired
     MovieService ms;
     @Test
@@ -20,25 +21,19 @@ class MovieRepositoryTest {
 
         int sizeOfTable = ms.listMovies().size();
 
-        List<Movie> list = ms.listMovies();
-
         assertTrue(ms.addMovieToDatabase(movie));
 
-        assertTrue(sizeOfTable < ms.listMovies().size());
+        List<Movie> list = ms.listMovies();
+
+        assertTrue(sizeOfTable < list.size());
     }
 
-  /*  @Test
+    @Test
     public void canReadMovieFromDatabase(){
-
-        MovieRepository mr = new MovieRepository();
-
-        for(Movie movie: mr.listMovies()){
-            if(movie.getTitle().equals("Shrek 32")){
+        for(Movie m: ms.listMovies()){
+            if(m.getTitle().equals("Shrek 32")){
                 assertTrue(true);
-                return;
             }
         }
-        assertTrue(false);
     }
-*/
 }
