@@ -5,19 +5,21 @@ import kino.xp.project.Service.MovieService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class MovieRepositoryTest {
+class MovieRepositoryTest
+{
     @Autowired
     MovieService ms;
+
     @Test
-    public void canAddMovieToDatabase(){
-        Movie movie = new Movie("Shrek 32", 90, 2, "Romantic horror", "Eddie Murphy", "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/tenet2020.ar_509x.jpg?v=1578062934");
+    public void canAddMovieToDatabase()
+    {
+        Movie movie = new Movie(0, "Shrek 32", 90, 2, "Romantic horror", "Eddie Murphy", "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/tenet2020.ar_509x.jpg?v=1578062934");
 
         int sizeOfTable = ms.listMovies().size();
 
@@ -29,11 +31,28 @@ class MovieRepositoryTest {
     }
 
     @Test
-    public void canReadMovieFromDatabase(){
-        for(Movie m: ms.listMovies()){
-            if(m.getTitle().equals("Shrek 32")){
+    public void canReadMovieFromDatabase()
+    {
+        for(Movie m: ms.listMovies())
+        {
+            if(m.getTitle().equals("Shrek 32"))
+            {
                 assertTrue(true);
             }
         }
+    }
+
+    @Test
+    public void canDeleteMovieFromDatabase()
+    {
+        Movie m = new Movie(56, "Shrek 6", 90, 2, "Romantic horror", "Eddie Murphy","https://cdn.shopify.com/s/files/1/0057/3728/3618/products/tenet2020.ar_509x.jpg?v=1578062934");
+        ms.addMovieToDatabase(m);
+
+        int sizeBeforeDeletion = ms.listMovies().size();
+        Movie testMovie = ms.getMovieByTitle(m.getTitle());
+        int mId = testMovie.getMovie_id();
+
+        assertTrue(ms.deleteMovieFromDatabase(mId));
+        assertTrue(sizeBeforeDeletion > ms.listMovies().size());
     }
 }

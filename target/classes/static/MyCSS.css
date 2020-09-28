@@ -8,6 +8,11 @@
     background-color: lightgreen;
     margin-bottom: 5px;
 }
+#deleteButton
+{
+    background-color: crimson;
+    color: white;
+}
 #backButton{
     height: 25px;
     width: 65px;
@@ -28,3 +33,23 @@
 #right{
     padding-left:4vw;
 }
+table{
+    background-color: white;
+    border-collapse: collapse;
+    width: 85%;
+}
+th{
+    background-color: lightblue;
+}
+td, th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 2px;
+}
+tr:nth-child(even){
+    background-color: lightblue;
+}
+tr{
+    height: 40px;
+}
+

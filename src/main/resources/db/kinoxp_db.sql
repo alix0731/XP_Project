@@ -8,7 +8,6 @@ CREATE TABLE `planner` (
   `startDate` varchar(45) DEFAULT NULL,
   `endDate` varchar(45) DEFAULT NULL,
   `start_time` int(11) DEFAULT NULL,
-  `poster` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`planner_id`)
 );
 
@@ -19,6 +18,7 @@ CREATE TABLE `movie` (
   `price_rank` int(11) NOT NULL,
   `actors` varchar(150) NOT NULL,
   `genre` varchar(45) NOT NULL,
+  `poster` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`movie_id`)
 );
 

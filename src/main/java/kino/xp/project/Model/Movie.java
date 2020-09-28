@@ -10,9 +10,10 @@ import javax.persistence.Id;
  **/
 
 @Entity
-public class Movie {
+public class Movie
+{
     @Id
-    private int id;
+    private int movie_id;
     private String title;
     private int duration;
     private int priceRank;
@@ -20,19 +21,13 @@ public class Movie {
     private String actors;
     private String poster;
 
-    public Movie() {
+    public Movie()
+    {
     }
 
-    public Movie(int id, String title, int duration, int priceRank, String genre, String actors) {
-        this.id = id;
-        this.title = title;
-        this.duration = duration;
-        this.priceRank = priceRank;
-        this.genre = genre;
-        this.actors = actors;
-    }
-
-    public Movie(String title, int duration, int priceRank, String genre, String actors, String poster) {
+    public Movie(int movie_id, String title, int duration, int priceRank, String genre, String actors, String poster)
+    {
+        this.movie_id = movie_id;
         this.title = title;
         this.duration = duration;
         this.priceRank = priceRank;
@@ -41,12 +36,22 @@ public class Movie {
         this.poster = poster;
     }
 
-    public int getId() {
-        return id;
+//    public Movie(String title, int duration, int priceRank, String genre, String actors, String poster)
+//    {
+//        this.title = title;
+//        this.duration = duration;
+//        this.priceRank = priceRank;
+//        this.genre = genre;
+//        this.actors = actors;
+//        this.poster = poster;
+//    }
+
+    public int getMovie_id() {
+        return movie_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setMovie_id(int id) {
+        this.movie_id = id;
     }
 
     public String getTitle() {

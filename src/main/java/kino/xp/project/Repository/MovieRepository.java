@@ -17,19 +17,42 @@ import java.util.List;
  **/
 
 @Repository
-public class MovieRepository {
+public class MovieRepository
+{
     @Autowired
     JdbcTemplate template;
 
-    public boolean addMovieToDatabase(Movie m) {
+    public boolean addMovieToDatabase(Movie m)
+    {
         String sql = "INSERT INTO movie (title, duration, price_rank, actors, genre, poster) VALUES (?, ?, ?, ?, ?, ?)";
         return (template.update(sql, m.getTitle(), m.getDuration(), m.getPriceRank(), m.getActors(), m.getGenre(), m.getPoster()) > 0);
     }
 
-    public List<Movie> listMovies() {
+    public List<Movie> listMovies()
+    {
         String sql = "SELECT * FROM movie";
         RowMapper<Movie> rm = new BeanPropertyRowMapper<>(Movie.class);
         System.out.println(template.query(sql, rm));
         return template.query(sql, rm);
+    }
+
+    public boolean deleteMovieFromDatabase(int id)
+    {
+        String sql = "DELETE FROM movie WHERE movie_id = ?";
+        return template.update(sql, id) > 0;
+    }
+
+    public Movie getMovieById(int id)
+    {
+        String sql = "SELECT * FROM movie WHERE movie_id = ?";
+        RowMapper<Movie> rm = new BeanPropertyRowMapper<>(Movie.class);
+        return template.queryForObject(sql, rm, id);
+    }
+
+    public Movie getMovieByTitle(String title)
+    {
+        String sql = "SELECT * FROM movie WHERE title = ?";
+        RowMapper<Movie> rm = new BeanPropertyRowMapper<>(Movie.class);
+        return template.queryForObject(sql, rm, title);
     }
 }
