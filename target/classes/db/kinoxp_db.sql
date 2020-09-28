@@ -8,6 +8,7 @@ CREATE TABLE `planner` (
   `startDate` varchar(45) DEFAULT NULL,
   `endDate` varchar(45) DEFAULT NULL,
   `start_time` int(11) DEFAULT NULL,
+  `poster` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`planner_id`)
 );
 

@@ -15,12 +15,10 @@ public class Movie {
     private int id;
     private String title;
     private int duration;
-    //private int startTime;
     private int priceRank;
-    //private Date startDate;
-    //private Date endDate;
     private String genre;
     private String actors;
+    private String poster;
 
     public Movie() {
     }
@@ -29,18 +27,18 @@ public class Movie {
         this.id = id;
         this.title = title;
         this.duration = duration;
-        //this.startTime = startTime;
         this.priceRank = priceRank;
         this.genre = genre;
         this.actors = actors;
     }
 
-    public Movie(String title, int duration, int priceRank, String genre, String actors) {
+    public Movie(String title, int duration, int priceRank, String genre, String actors, String poster) {
         this.title = title;
         this.duration = duration;
         this.priceRank = priceRank;
         this.genre = genre;
         this.actors = actors;
+        this.poster = poster;
     }
 
     public int getId() {
@@ -91,15 +89,9 @@ public class Movie {
         this.actors = actors;
     }
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", duration=" + duration +
-                ", priceRank=" + priceRank +
-                ", genre='" + genre + '\'' +
-                ", actors='" + actors + '\'' +
-                '}';
+    public String getPoster() {
+        return poster;
     }
+
+    public void setPoster(String poster) {this.poster = poster}
 }
