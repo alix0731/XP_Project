@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="project initiation">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/movieTemplates/ListMovies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/movieTemplates/UpdateMovie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/MovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/kinoxp_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/kinoxp_db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/MyCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/MyCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CreateMovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/movieTemplates/CreateMovie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/movieTemplates/CreateMovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/movieTemplates/CreateMovie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/movieTemplates/ListMovies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/movieTemplates/ListMovies.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/kino/xp/project/Model/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/Model/MovieTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/kino/xp/project/Repository/MovieRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/Repository/MovieRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/kinoxp_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/kinoxp_db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/MyCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/MyCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/CreateMovie.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,18 +88,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProjectApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MovieRepositoryTest.canUpdateMovieInDatabase">
     <configuration name="DBTest.testConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KinoXP" />
       <extension name="coverage">
@@ -167,22 +153,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MovieRepositoryTest.canUpdateMovieInDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KinoXP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kino.xp.project.Repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kino.xp.project.Repository" />
+      <option name="MAIN_CLASS_NAME" value="kino.xp.project.Repository.MovieRepositoryTest" />
+      <option name="METHOD_NAME" value="canUpdateMovieInDatabase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="KinoXP" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="kino.xp.project.ProjectApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="JUnit.DBTest.testConnection" />
-      <item itemvalue="Spring Boot.ProjectApplication" />
       <item itemvalue="JUnit.MovieRepositoryTest.canDeleteMovieFromDatabase" />
       <item itemvalue="JUnit.MovieRepositoryTest.canAddMovieToDatabase" />
       <item itemvalue="JUnit.MovieRepositoryTest.canReadMovieFromDatabase" />
+      <item itemvalue="Spring Boot.ProjectApplication" />
+      <item itemvalue="JUnit.MovieRepositoryTest.canUpdateMovieInDatabase" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MovieRepositoryTest.canUpdateMovieInDatabase" />
         <item itemvalue="JUnit.MovieRepositoryTest.canDeleteMovieFromDatabase" />
         <item itemvalue="JUnit.MovieRepositoryTest.canReadMovieFromDatabase" />
         <item itemvalue="JUnit.MovieRepositoryTest.canAddMovieToDatabase" />
@@ -190,7 +195,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -274,9 +279,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="project initiation" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="392" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601293074864">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="376" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601462735814">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="376" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601462735814" />
     <state x="392" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1601293074864" />
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600695725010">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -290,9 +296,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="737" y="436" width="446" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.27.1920.1053@0.27.1920.1053" timestamp="1600859827800" />
-    <state x="308" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601299976229">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="296" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601462812930">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="296" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1601462812930" />
     <state x="308" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1601299976229" />
     <state x="371" y="71" width="856" height="724" key="CommitChangelistDialog2" timestamp="1601292741313">
       <screen x="0" y="0" width="1600" height="860" />
@@ -303,51 +310,59 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="527" y="125" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1601296882614" />
-    <state width="1545" height="259" key="GridCell.Tab.0.bottom" timestamp="1601301234230">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.0.bottom" timestamp="1601466412197">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601466412197" />
     <state width="1545" height="259" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601301234230" />
     <state width="1261" height="208" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1600968796805" />
     <state width="1878" height="234" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
-    <state width="1545" height="259" key="GridCell.Tab.0.center" timestamp="1601301234229">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.0.center" timestamp="1601466412197">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601466412197" />
     <state width="1545" height="259" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601301234229" />
     <state width="1261" height="208" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1600968796802" />
     <state width="1878" height="234" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
-    <state width="1545" height="259" key="GridCell.Tab.0.left" timestamp="1601301234229">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.0.left" timestamp="1601466412196">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601466412196" />
     <state width="1545" height="259" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601301234229" />
     <state width="1261" height="208" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1600968796800" />
     <state width="1878" height="234" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376424" />
-    <state width="1545" height="259" key="GridCell.Tab.0.right" timestamp="1601301234230">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.0.right" timestamp="1601466412197">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601466412197" />
     <state width="1545" height="259" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601301234230" />
     <state width="1261" height="208" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1600968796803" />
     <state width="1878" height="234" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
-    <state width="1545" height="259" key="GridCell.Tab.1.bottom" timestamp="1601301234230">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.1.bottom" timestamp="1601466412198">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601466412198" />
     <state width="1545" height="259" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601301234230" />
     <state width="1261" height="208" key="GridCell.Tab.1.bottom/0.23.1440.812@0.23.1440.812" timestamp="1600968796809" />
     <state width="1878" height="342" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735626" />
-    <state width="1545" height="259" key="GridCell.Tab.1.center" timestamp="1601301234230">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.1.center" timestamp="1601466412197">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601466412197" />
     <state width="1545" height="259" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1601301234230" />
     <state width="1261" height="208" key="GridCell.Tab.1.center/0.23.1440.812@0.23.1440.812" timestamp="1600968796807" />
     <state width="1878" height="342" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735625" />
-    <state width="1545" height="259" key="GridCell.Tab.1.left" timestamp="1601301234230">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.1.left" timestamp="1601466412197">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601466412197" />
     <state width="1545" height="259" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1601301234230" />
     <state width="1261" height="208" key="GridCell.Tab.1.left/0.23.1440.812@0.23.1440.812" timestamp="1600968796806" />
     <state width="1878" height="342" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735624" />
-    <state width="1545" height="259" key="GridCell.Tab.1.right" timestamp="1601301234230">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1493" height="257" key="GridCell.Tab.1.right" timestamp="1601466412198">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="257" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601466412198" />
     <state width="1545" height="259" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1601301234230" />
     <state width="1261" height="208" key="GridCell.Tab.1.right/0.23.1440.812@0.23.1440.812" timestamp="1600968796808" />
     <state width="1878" height="342" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735625" />
@@ -377,5 +392,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="372" y="192" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1601298738101" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601465549930">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601465549930" />
   </component>
 </project>

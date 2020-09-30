@@ -34,12 +34,12 @@
     padding-left:4vw;
 }
 table{
-    background-color: white;
+    background-color: gray;
     border-collapse: collapse;
     width: 85%;
 }
 th{
-    background-color: lightblue;
+    background-color: lightgray;
 }
 td, th{
     border: 1px solid black;
@@ -47,9 +47,8 @@ td, th{
     padding: 2px;
 }
 tr:nth-child(even){
-    background-color: lightblue;
+    background-color: lightcoral;
 }
 tr{
     height: 40px;
 }
-

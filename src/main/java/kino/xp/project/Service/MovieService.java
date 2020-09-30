@@ -42,4 +42,9 @@ public class MovieService
     {
         return mr.getMovieByTitle(title);
     }
+
+    public void updateMovieInDatabase(Movie m)
+    {
+        mr.updateMovieInDatabase(m);
+    }
 }

@@ -16,7 +16,7 @@ public class Movie
     private int movie_id;
     private String title;
     private int duration;
-    private int priceRank;
+    private int price_rank;
     private String genre;
     private String actors;
     private String poster;
@@ -25,12 +25,12 @@ public class Movie
     {
     }
 
-    public Movie(int movie_id, String title, int duration, int priceRank, String genre, String actors, String poster)
+    public Movie(int movie_id, String title, int duration, int price_rank, String genre, String actors, String poster)
     {
         this.movie_id = movie_id;
         this.title = title;
         this.duration = duration;
-        this.priceRank = priceRank;
+        this.price_rank = price_rank;
         this.genre = genre;
         this.actors = actors;
         this.poster = poster;
@@ -70,12 +70,12 @@ public class Movie
         this.duration = duration;
     }
 
-    public int getPriceRank() {
-        return priceRank;
+    public int getPrice_rank() {
+        return price_rank;
     }
 
-    public void setPriceRank(int priceRank) {
-        this.priceRank = priceRank;
+    public void setPrice_rank(int priceRank) {
+        this.price_rank = priceRank;
     }
 
     public String getGenre() {

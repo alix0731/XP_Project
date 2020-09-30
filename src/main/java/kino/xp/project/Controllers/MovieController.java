@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -38,17 +39,26 @@ public class MovieController
         return "/index";
     }
 
-    @GetMapping("/DeleteMovie")
-    public String deleteMovie()
-    {
-        return path + "DeleteMovie";
-    }
-
     @GetMapping("/ListMovies")
     public String listMovies(Model model)
     {
         List<Movie> movieList = movieService.listMovies();
         model.addAttribute("movieList", movieList);
         return path + "ListMovies";
+    }
+
+    @GetMapping("/DeleteMovie/{movie_id}")
+    public String deleteMovie(@PathVariable("movie_id") int id)
+    {
+        movieService.deleteMovieFromDatabase(id);
+        return path + "ListMovies";
+    }
+
+    @GetMapping("UpdateMovie/{movie_id}")
+    public String updateMovie(@PathVariable("movie_id") int id, Model model)
+    {
+        Movie m = movieService.getMovieById(id);
+        model.addAttribute("movie", m);
+        return path + "UpdateMovie";
     }
 }

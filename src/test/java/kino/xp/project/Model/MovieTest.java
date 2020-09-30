@@ -15,7 +15,7 @@ class MovieTest {
         //assertTrue(test.getId() == 1);
         assertEquals("Tenet", test.getTitle());
         assertEquals(118, test.getDuration());
-        assertEquals(1, test.getPriceRank());
+        assertEquals(1, test.getPrice_rank());
         assertEquals("Action", test.getGenre());
         assertEquals("Robert Pattinson, Michael Caine", test.getActors());
     }

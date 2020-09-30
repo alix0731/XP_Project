@@ -55,4 +55,16 @@ class MovieRepositoryTest
         assertTrue(ms.deleteMovieFromDatabase(mId));
         assertTrue(sizeBeforeDeletion > ms.listMovies().size());
     }
+
+    @Test
+    public void canUpdateMovieInDatabase()
+    {
+        Movie m = new Movie(56, "Shrek 6", 90, 2, "Romantic horror", "Eddie Murphy","https://cdn.shopify.com/s/files/1/0057/3728/3618/products/tenet2020.ar_509x.jpg?v=1578062934");
+        ms.addMovieToDatabase(m);
+        m = ms.getMovieByTitle("Shrek 6");
+        Movie newMovie = new Movie(m.getMovie_id(), "Shrek 10", 90, 2, "Romantic horror", "Eddie Murphy","https://cdn.shopify.com/s/files/1/0057/3728/3618/products/tenet2020.ar_509x.jpg?v=1578062934");
+        ms.updateMovieInDatabase(newMovie);
+        m = ms.getMovieById(m.getMovie_id());
+        assertTrue(m.getTitle().equals(newMovie.getTitle()));
+    }
 }
