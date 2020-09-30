@@ -2,17 +2,26 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
 
     <div class="banner" th:fragment="header">
-        <ul>
-            <li class="logo-item"> <img th:src="kino.png" width="180vw" height="60vh" href="/index">
-            </li>
-            <li class="login-item">
-                <div th:replace="fragments/login :: loginBtn" width="10vw" height="5vh">
 
-                </div>
-            </li>
-        </ul>
+        <div class="container-fluid">
+            <ul>
+                <li class="logo-item "><a href="/"><img th:src="kino.png" width="250vw" height="75vh"></a>
+
+                </li>
+                <li class="login-item">
+                    <div th:replace="fragments/login :: loginBtn" width="8vw" height="3vh">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
         <style>
             .banner{
                 top: 10vh;
