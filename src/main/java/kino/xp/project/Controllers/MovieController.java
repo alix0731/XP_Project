@@ -51,7 +51,7 @@ public class MovieController
     public String deleteMovie(@PathVariable("movie_id") int id)
     {
         movieService.deleteMovieFromDatabase(id);
-        return path + "ListMovies";
+        return "redirect:/ListMovies";
     }
 
     @GetMapping("/UpdateMovie/{movie_id}")

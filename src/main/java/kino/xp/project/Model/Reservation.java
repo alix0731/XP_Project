@@ -1,0 +1,120 @@
+package kino.xp.project.Model;
+
+public class Reservation {
+
+    private int reservation_id;
+    private String firstName;
+    private String lastName;
+    private int phoneNumber;
+    private String email;
+    private String movie_title;
+    private String movie_playtime;
+    private String movie_date;
+    private String reservation_date;
+
+    public Reservation() {
+    }
+
+    public Reservation(int reservation_id, String firstName, String lastName, int phoneNumber, String email, String movie_title, String movie_playtime, String movie_date, String reservation_date) {
+        this.reservation_id = reservation_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.movie_title = movie_title;
+        this.movie_playtime = movie_playtime;
+        this.movie_date = movie_date;
+        this.reservation_date = reservation_date;
+    }
+
+
+    public int getReservation_id() {
+        return reservation_id;
+    }
+
+    public void setReservation_id(int reservation_id) {
+        this.reservation_id = reservation_id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMovie_title() {
+        return movie_title;
+    }
+
+    public void setMovie_title(String movie_title) {
+        this.movie_title = movie_title;
+    }
+
+    public String getMovie_playtime() {
+        return movie_playtime;
+    }
+
+    public void setMovie_playtime(String movie_playtime) {
+        this.movie_playtime = movie_playtime;
+    }
+
+    public String getMovie_date() {
+        return movie_date;
+    }
+
+    public void setMovie_date(String movie_date) {
+        this.movie_date = movie_date;
+    }
+
+    public String getReservation_date() {
+        return reservation_date;
+    }
+
+    public void setReservation_date(String reservation_date) {
+        this.reservation_date = reservation_date;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "reservation_id=" + reservation_id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                ", movie_title='" + movie_title + '\'' +
+                ", movie_playtime='" + movie_playtime + '\'' +
+                ", movie_date='" + movie_date + '\'' +
+                ", reservation_date='" + reservation_date + '\'' +
+                '}';
+    }
+}
+
+
