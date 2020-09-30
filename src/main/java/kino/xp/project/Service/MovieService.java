@@ -18,6 +18,7 @@ public class MovieService {
     MovieRepository mr;
 
     public boolean addMovieToDatabase(Movie movie) {
+
         return mr.addMovieToDatabase(movie);
     }
 
