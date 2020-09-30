@@ -11,7 +11,7 @@ public class ReservationTest {
     public void createObj(){
 
         //Arrange
-        Reservation reservation = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20");
+        Reservation reservation = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20", 2, 22);
         //Act
         String expectedMovieTitle = "Tenet";
         String actual = reservation.getMovie_title();
