@@ -54,11 +54,18 @@ public class MovieController
         return path + "ListMovies";
     }
 
-    @GetMapping("UpdateMovie/{movie_id}")
+    @GetMapping("/UpdateMovie/{movie_id}")
     public String updateMovie(@PathVariable("movie_id") int id, Model model)
     {
         Movie m = movieService.getMovieById(id);
         model.addAttribute("movie", m);
         return path + "UpdateMovie";
+    }
+
+    @PostMapping("/UpdateMovie")
+    public String updateMovie(@ModelAttribute Movie movie)
+    {
+        movieService.updateMovieInDatabase(movie);
+        return "redirect:/ListMovies";
     }
 }
