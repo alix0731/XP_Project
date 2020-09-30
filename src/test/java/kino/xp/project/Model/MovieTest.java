@@ -11,11 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class MovieTest {
     @Test
     public void canCreateMovie() {
-        Movie test = new Movie(1, "Tenet", 118, 1, "Flot film", "Robert Pattinson, Michael Caine");
+        Movie test = new Movie(1, "Tenet", 118, 1, "Flot film", "Robert Pattinson, Michael Caine", "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/tenet2020.ar_509x.jpg?v=1578062934");
         //assertTrue(test.getId() == 1);
         assertEquals("Tenet", test.getTitle());
         assertEquals(118, test.getDuration());
-        assertEquals(1, test.getPriceRank());
+        assertEquals(1, test.getPrice_rank());
         assertEquals("Action", test.getGenre());
         assertEquals("Robert Pattinson, Michael Caine", test.getActors());
     }

@@ -13,16 +13,38 @@ import java.util.List;
  **/
 
 @Service
-public class MovieService {
+public class MovieService
+{
     @Autowired
     MovieRepository mr;
 
-    public boolean addMovieToDatabase(Movie movie) {
-
+    public boolean addMovieToDatabase(Movie movie)
+    {
         return mr.addMovieToDatabase(movie);
     }
 
-    public List<Movie> listMovies() {
+    public List<Movie> listMovies()
+    {
         return mr.listMovies();
+    }
+
+    public boolean deleteMovieFromDatabase(int id)
+    {
+        return mr.deleteMovieFromDatabase(id);
+    }
+
+    public Movie getMovieById(int id)
+    {
+        return mr.getMovieById(id);
+    }
+
+    public Movie getMovieByTitle(String title)
+    {
+        return mr.getMovieByTitle(title);
+    }
+
+    public void updateMovieInDatabase(Movie m)
+    {
+        mr.updateMovieInDatabase(m);
     }
 }

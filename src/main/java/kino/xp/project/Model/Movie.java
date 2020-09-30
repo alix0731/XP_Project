@@ -10,45 +10,48 @@ import javax.persistence.Id;
  **/
 
 @Entity
-public class Movie {
+public class Movie
+{
     @Id
-    private int id;
+    private int movie_id;
     private String title;
     private int duration;
-    //private int startTime;
-    private int priceRank;
-    //private Date startDate;
-    //private Date endDate;
+    private int price_rank;
     private String genre;
     private String actors;
+    private String poster;
 
-    public Movie() {
+    public Movie()
+    {
     }
 
-    public Movie(int id, String title, int duration, int priceRank, String genre, String actors) {
-        this.id = id;
+    public Movie(int movie_id, String title, int duration, int price_rank, String genre, String actors, String poster)
+    {
+        this.movie_id = movie_id;
         this.title = title;
         this.duration = duration;
-        //this.startTime = startTime;
-        this.priceRank = priceRank;
+        this.price_rank = price_rank;
         this.genre = genre;
         this.actors = actors;
+        this.poster = poster;
     }
 
-    public Movie(String title, int duration, int priceRank, String genre, String actors) {
-        this.title = title;
-        this.duration = duration;
-        this.priceRank = priceRank;
-        this.genre = genre;
-        this.actors = actors;
+//    public Movie(String title, int duration, int priceRank, String genre, String actors, String poster)
+//    {
+//        this.title = title;
+//        this.duration = duration;
+//        this.priceRank = priceRank;
+//        this.genre = genre;
+//        this.actors = actors;
+//        this.poster = poster;
+//    }
+
+    public int getMovie_id() {
+        return movie_id;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setMovie_id(int id) {
+        this.movie_id = id;
     }
 
     public String getTitle() {
@@ -67,12 +70,12 @@ public class Movie {
         this.duration = duration;
     }
 
-    public int getPriceRank() {
-        return priceRank;
+    public int getPrice_rank() {
+        return price_rank;
     }
 
-    public void setPriceRank(int priceRank) {
-        this.priceRank = priceRank;
+    public void setPrice_rank(int priceRank) {
+        this.price_rank = priceRank;
     }
 
     public String getGenre() {
@@ -91,15 +94,9 @@ public class Movie {
         this.actors = actors;
     }
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", duration=" + duration +
-                ", priceRank=" + priceRank +
-                ", genre='" + genre + '\'' +
-                ", actors='" + actors + '\'' +
-                '}';
+    public String getPoster() {
+        return poster;
     }
+
+    public void setPoster(String poster) {this.poster = poster;}
 }
