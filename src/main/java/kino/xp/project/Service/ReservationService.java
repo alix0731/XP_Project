@@ -16,5 +16,19 @@ public class ReservationService {
         return reservationService.createReservation(reservation);
     }
 
+    public boolean deleteReservation(int id)
+    {
+        return reservationService.deleteReservation(id);
+    }
+
+//    public void updateReservation(Reservation reservation)
+//    {
+//        reservationService.updateReservation(reservation);
+//    }
+
+    public Reservation getReservationByPhonenumber(int nr)
+    {
+        return reservationService.getReservationByPhonenumber(nr);
+    }
 
 }
