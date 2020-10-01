@@ -1,7 +1,12 @@
 package kino.xp.project.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Reservation {
 
+    @Id
     private int reservation_id;
     private String firstName;
     private String lastName;
