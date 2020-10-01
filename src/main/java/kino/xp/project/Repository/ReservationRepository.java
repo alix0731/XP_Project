@@ -1,11 +1,14 @@
 package kino.xp.project.Repository;
 
+import kino.xp.project.Model.Planner;
 import kino.xp.project.Model.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public class ReservationRepository {
@@ -45,6 +48,40 @@ public class ReservationRepository {
         String sql = "SELECT * FROM reservation WHERE phoneNumber = ?";
         RowMapper<Reservation> rm = new BeanPropertyRowMapper<>(Reservation.class);
         return jdbcTemplate.queryForObject(sql, rm, nr);
+    }
+
+    public List<Reservation> getListOfReservationsByMovieTitleAndPlaytimeAndDate(String title, String playtime, String date)
+    {
+        String sql = "SELECT * FROM reservation WHERE movie_title = ? AND movie_playtime = ? AND movie_date = ?";
+        RowMapper<Reservation> rm = new BeanPropertyRowMapper<>(Reservation.class);
+        return jdbcTemplate.query(sql, rm, title, playtime, date);
+    }
+
+    public int getNumberOfReservations(String title, String playtime, String date)
+    {
+        return getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date).size();
+    }
+
+    public int calculateSeatsReserved(int theaterId, String title, String playtime, String date)
+    {
+        String sql = "SELECT seats FROM theaters WHERE theater_id = ?";
+        String sql2 = "SELECT rows FROM theaters WHERE theater_id = ?";
+
+        RowMapper<Integer> rm = new BeanPropertyRowMapper<>(Integer.class);
+        Integer numberOfSeats = jdbcTemplate.queryForObject(sql, rm, theaterId);
+        Integer numberOfRows = jdbcTemplate.queryForObject(sql2, rm, theaterId);
+        int totalSeats = numberOfSeats * numberOfRows;
+
+        double percentageReserved = getNumberOfReservations(title, playtime, date)/totalSeats;
+
+        //Hvis metoden returnerer 0 er der fuldt optaget, 1: 75% eller mere optaget, 2: under 75%
+        if(percentageReserved == 1) {
+            return 0;
+        } else if(percentageReserved >=0.75) {
+            return 1;
+        } else {
+            return 2;
+        }
     }
 
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table id="table_id">
+    <tr th:each="object: ${movieReservationList}">
+        <td>
+            <a href="/create-reservation">
+                <button class="reserveButton">
+                    1
+                </button>
+            </a>
+        </td>
+    </tr>
+</table>
+
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('#table_id td.reserveButton').each(function(){
+            if ($(this).text() == '1') {
+                $(this).css('color','#f00');
+            }
+        });
+    });
+
+</script>
+</html>

@@ -31,4 +31,9 @@ public class ReservationService {
         return reservationRepository.getReservationByPhonenumber(nr);
     }
 
+    public int calculateSeatsReserved(int theaterId, String title, String playtime, String date)
+    {
+        return reservationRepository.calculateSeatsReserved(theaterId, title, playtime, date);
+    }
+
 }
