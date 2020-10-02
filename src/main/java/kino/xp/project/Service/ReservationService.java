@@ -10,11 +10,30 @@ import org.springframework.stereotype.Service;
 public class ReservationService {
 
     @Autowired
-    ReservationRepository reservationService = new ReservationRepository();
+    ReservationRepository reservationRepository;
 
     public boolean createReservation(Reservation reservation){
-        return reservationService.createReservation(reservation);
+        return reservationRepository.createReservation(reservation);
     }
 
+    public boolean deleteReservation(int id)
+    {
+        return reservationRepository.deleteReservation(id);
+    }
+
+//    public void updateReservation(Reservation reservation)
+//    {
+//        reservationService.updateReservation(reservation);
+//    }
+
+    public Reservation getReservationByPhonenumber(int nr)
+    {
+        return reservationRepository.getReservationByPhonenumber(nr);
+    }
+
+    public int calculateSeatsReserved(int theaterId, String title, String playtime, String date)
+    {
+        return reservationRepository.calculateSeatsReserved(theaterId, title, playtime, date);
+    }
 
 }

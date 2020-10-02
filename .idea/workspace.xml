@@ -22,19 +22,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="project initiation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/ReservationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Model/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/ReservationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/ReservationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reservationPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/Model/ReservationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/kino/xp/project/Repository/ReservationRepository.java" afterDir="false" />
+    <list default="true" id="4f878c16-ba7b-4375-a662-561bd822ac47" name="Default Changelist" comment="Tilføjet en testklasse&#10;Tilføjet tags i Reservation Model&#10;Rettet navn på ReservationRepository i ReservationService">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Model/Planner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reservationButtonColorCoding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reservationButtonTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_3_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KinoXP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KinoXP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kino/xp/project/Service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/KinoXP.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/statistic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/statistic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/KinoXP.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +46,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -60,7 +63,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$USER_HOME$/.m2/wrapper/dists/apache-maven-3.6.3-bin/1iopthnavndlasol9gbrbg6bf2/apache-maven-3.6.3" />
+        <option name="mavenHome" value="C:\Users\emiln\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -74,6 +77,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -81,14 +88,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4979253" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="kino.xp.project.Repository" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="kino.xp.project" />
       <recent name="" />
@@ -100,28 +118,22 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="kino.xp.project" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ProjectApplication">
-    <configuration name="DBTest.testConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="KinoXP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kino.xp.project.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kino.xp.project" />
-      <option name="MAIN_CLASS_NAME" value="kino.xp.project.DBTest" />
-      <option name="METHOD_NAME" value="testConnection" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieRepositoryTest.canAddMovieToDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovieRepositoryTest.canReadMovieFromDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KinoXP" />
       <extension name="coverage">
         <pattern>
@@ -131,13 +143,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="kino.xp.project.Repository" />
       <option name="MAIN_CLASS_NAME" value="kino.xp.project.Repository.MovieRepositoryTest" />
-      <option name="METHOD_NAME" value="canAddMovieToDatabase" />
+      <option name="METHOD_NAME" value="canReadMovieFromDatabase" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReservationRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReservationRepositoryTest.createReservation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KinoXP" />
       <extension name="coverage">
         <pattern>
@@ -146,8 +158,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kino.xp.project.Repository" />
+      <option name="MAIN_CLASS_NAME" value="kino.xp.project.Repository.ReservationRepositoryTest" />
+      <option name="METHOD_NAME" value="createReservation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationRepositoryTest.deleteReservation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KinoXP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kino.xp.project.Repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kino.xp.project.Repository" />
+      <option name="MAIN_CLASS_NAME" value="kino.xp.project.Repository.ReservationRepositoryTest" />
+      <option name="METHOD_NAME" value="deleteReservation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationRepository.canDeleteReservation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KinoXP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kino.xp.project.Repository.ReservationRepository" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kino.xp.project.Repository" />
       <option name="MAIN_CLASS_NAME" value="kino.xp.project.Repository.ReservationRepository" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="canDeleteReservation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,29 +201,13 @@
       <module name="KinoXP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kino.xp.project.Repository.*" />
+          <option name="PATTERN" value="kino.xp.project.Repository.ReservationRepository" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kino.xp.project.Repository" />
       <option name="MAIN_CLASS_NAME" value="kino.xp.project.Repository.ReservationRepository" />
       <option name="METHOD_NAME" value="createReservation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReservationTest.createObj" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="KinoXP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kino.xp.project.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kino.xp.project.Model" />
-      <option name="MAIN_CLASS_NAME" value="kino.xp.project.Model.ReservationTest" />
-      <option name="METHOD_NAME" value="createObj" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,17 +220,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ReservationRepository.createReservation" />
+      <item itemvalue="Spring Boot.ProjectApplication" />
+      <item itemvalue="JUnit.ReservationRepository.canDeleteReservation" />
+      <item itemvalue="JUnit.MovieRepositoryTest.canReadMovieFromDatabase" />
+      <item itemvalue="JUnit.ReservationRepositoryTest.deleteReservation" />
+      <item itemvalue="JUnit.ReservationRepositoryTest.createReservation" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MovieRepositoryTest.canReadMovieFromDatabase" />
+        <item itemvalue="JUnit.ReservationRepositoryTest.createReservation" />
+        <item itemvalue="JUnit.ReservationRepositoryTest.deleteReservation" />
+        <item itemvalue="JUnit.ReservationRepository.canDeleteReservation" />
         <item itemvalue="JUnit.ReservationRepository.createReservation" />
-        <item itemvalue="JUnit.ReservationTest.createObj" />
-        <item itemvalue="JUnit.ReservationRepository" />
-        <item itemvalue="JUnit.MovieRepositoryTest.canAddMovieToDatabase" />
-        <item itemvalue="JUnit.DBTest.testConnection" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -281,7 +318,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601025810865</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Delete reservation oprettet">
+      <created>1601547052529</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1601547052529</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Tilføjet en testklasse&#10;Tilføjet tags i Reservation Model&#10;Rettet navn på ReservationRepository i ReservationService&#10;Tilføjet metode i ReservationController">
+      <created>1601551627560</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601551627560</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,17 +341,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project header footer" />
     <MESSAGE value="project initiation" />
-    <option name="LAST_COMMIT_MESSAGE" value="project initiation" />
+    <MESSAGE value="Delete reservation oprettet" />
+    <MESSAGE value="Tilføjet en testklasse&#10;Tilføjet tags i Reservation Model&#10;Rettet navn på ReservationRepository i ReservationService&#10;Tilføjet metode i ReservationController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet en testklasse&#10;Tilføjet tags i Reservation Model&#10;Rettet navn på ReservationRepository i ReservationService&#10;Tilføjet metode i ReservationController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600695725010">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="706" y="357" width="497" height="400" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1600695725010" />
-    <state x="709" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1601414295274">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="788" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1601554531982">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="709" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1601414295274" />
+    <state x="788" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1601554531982" />
     <state x="607" y="479" width="715" height="155" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600859826756">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -309,81 +363,94 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="737" y="436" width="446" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.27.1920.1053@0.27.1920.1053" timestamp="1600859827800" />
-    <state x="2365" y="89" width="802" height="886" key="CommitChangelistDialog2" timestamp="1601025810816">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="371" y="71" width="856" height="706" key="CommitChangelistDialog2" timestamp="1601551625737">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="371" y="71" width="856" height="706" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1601551625737" />
     <state x="445" y="114" width="1020" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1600863787531" />
     <state x="2365" y="89" width="802" height="886" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601025810816" />
-    <state width="1878" height="246" key="GridCell.Tab.0.bottom" timestamp="1601424098660">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="222" y="68" key="FileChooserDialogImpl" timestamp="1601547917382">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="222" y="68" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1601547917382" />
+    <state width="1545" height="275" key="GridCell.Tab.0.bottom" timestamp="1601554245358">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="786" height="246" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601416349947" />
+    <state width="1545" height="275" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601554245358" />
     <state width="938" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650984" />
     <state width="1878" height="246" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098660" />
     <state width="1261" height="208" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1600968796805" />
     <state width="1177" height="246" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1601423540456" />
     <state width="1878" height="234" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
     <state width="1878" height="342" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026691773" />
-    <state width="1878" height="246" key="GridCell.Tab.0.center" timestamp="1601424098657">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1545" height="275" key="GridCell.Tab.0.center" timestamp="1601554245358">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="786" height="246" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1601416349942" />
+    <state width="1545" height="275" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601554245358" />
     <state width="938" height="193" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650984" />
     <state width="1878" height="246" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098657" />
     <state width="1261" height="208" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1600968796802" />
     <state width="1177" height="246" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1601423540451" />
     <state width="1878" height="234" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
     <state width="1878" height="342" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026691773" />
-    <state width="1878" height="246" key="GridCell.Tab.0.left" timestamp="1601424098655">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1545" height="275" key="GridCell.Tab.0.left" timestamp="1601554245358">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="786" height="246" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1601416349940" />
+    <state width="1545" height="275" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601554245358" />
     <state width="938" height="193" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650984" />
     <state width="1878" height="246" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098655" />
     <state width="1261" height="208" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1600968796800" />
     <state width="1177" height="246" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1601423540449" />
     <state width="1878" height="234" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376424" />
     <state width="1878" height="342" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026691773" />
-    <state width="1878" height="246" key="GridCell.Tab.0.right" timestamp="1601424098658">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1545" height="275" key="GridCell.Tab.0.right" timestamp="1601554245358">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="786" height="246" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601416349944" />
+    <state width="1545" height="275" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601554245358" />
     <state width="938" height="193" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650984" />
     <state width="1878" height="246" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098658" />
     <state width="1261" height="208" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1600968796803" />
     <state width="1177" height="246" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1601423540452" />
     <state width="1878" height="234" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600863376425" />
     <state width="1878" height="342" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026691773" />
-    <state width="1878" height="246" key="GridCell.Tab.1.bottom" timestamp="1601424098667">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1545" height="275" key="GridCell.Tab.1.bottom" timestamp="1601554245359">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1545" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601554245359" />
     <state width="938" height="193" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650855" />
     <state width="1878" height="246" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098667" />
     <state width="1261" height="208" key="GridCell.Tab.1.bottom/0.23.1440.812@0.23.1440.812" timestamp="1600968796809" />
     <state width="1177" height="246" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1601423540465" />
     <state width="1878" height="342" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735626" />
     <state width="1878" height="264" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026691642" />
-    <state width="1878" height="246" key="GridCell.Tab.1.center" timestamp="1601424098664">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1545" height="275" key="GridCell.Tab.1.center" timestamp="1601554245359">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1545" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1601554245359" />
     <state width="938" height="193" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650855" />
     <state width="1878" height="246" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098664" />
     <state width="1261" height="208" key="GridCell.Tab.1.center/0.23.1440.812@0.23.1440.812" timestamp="1600968796807" />
     <state width="1177" height="246" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1601423540460" />
     <state width="1878" height="342" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735625" />
     <state width="1878" height="264" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026691642" />
-    <state width="1878" height="246" key="GridCell.Tab.1.left" timestamp="1601424098662">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1545" height="275" key="GridCell.Tab.1.left" timestamp="1601554245358">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1545" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1601554245358" />
     <state width="938" height="193" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650855" />
     <state width="1878" height="246" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098662" />
     <state width="1261" height="208" key="GridCell.Tab.1.left/0.23.1440.812@0.23.1440.812" timestamp="1600968796806" />
     <state width="1177" height="246" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1601423540458" />
     <state width="1878" height="342" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600860735624" />
     <state width="1878" height="264" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026691642" />
-    <state width="1878" height="246" key="GridCell.Tab.1.right" timestamp="1601424098665">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1545" height="275" key="GridCell.Tab.1.right" timestamp="1601554245359">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1545" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1601554245359" />
     <state width="938" height="193" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1601028650855" />
     <state width="1878" height="246" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601424098665" />
     <state width="1261" height="208" key="GridCell.Tab.1.right/0.23.1440.812@0.23.1440.812" timestamp="1600968796808" />
@@ -414,21 +481,36 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="775" y="267" width="359" height="580" key="RollbackChangesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600859681094" />
-    <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1600696036590">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="202" y="0" width="949" height="860" key="SettingsEditor" timestamp="1601550548996">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="202" y="0" width="949" height="860" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601550548996" />
     <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600696036590" />
-    <state x="2475" y="269" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601025989860">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="463" y="195" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601551639354">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="463" y="195" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1601551639354" />
     <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600863793511" />
     <state x="2475" y="269" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601025989860" />
-    <state x="573" y="378" width="390" height="152" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601415785709">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="92" y="92" width="1416" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601549235768">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="92" y="92" width="1416" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1601549235768" />
+    <state x="459" y="460" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1601548486676">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="459" y="460" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1600.860@0.0.1600.860" timestamp="1601548486676" />
+    <state x="637" y="361" width="446" height="211" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601558706451">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="573" y="378" width="390" height="152" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601415785709" />
+    <state x="637" y="361" width="446" height="211" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1601558706450" />
     <state x="764" y="469" width="392" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600864535934" />
     <state x="2684" y="453" width="392" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601026153015" />
+    <state x="516" y="183" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1601548943077">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="516" y="183" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1600.860@0.0.1600.860" timestamp="1601548943077" />
     <state x="2638" y="259" width="474" height="596" key="git4idea.branch.GitSmartOperationDialog" timestamp="1601023765509">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -437,9 +519,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="299" y="72" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1601415875195" />
-    <state x="2543" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1601025558083">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="519" y="206" width="840" height="540" key="search.everywhere.popup" timestamp="1601552529385">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="519" y="206" width="840" height="540" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1601552529385" />
     <state x="2543" y="259" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1601025558083" />
   </component>
 </project>
