@@ -20,9 +20,9 @@
 </head>
 <body>
 
-<header th:replace="fragments/header :: header">
+<!--<header th:replace="fragments/header :: header">-->
 
-</header>
+<!--</header>-->
 
 <main>
 
@@ -113,12 +113,27 @@
         </div>
 
         <br/>
+        
+        <div class="form-group">
+            <label for="paid">Pay now:</label>
+            <img th:height="25px" src="https://logodix.com/logo/878247.png" alt="card logo">
+            <br/>
+            <input type="radio" name="paid" id="paid" value="true">
+            <br>
+            <label for="paylater">Pay on arrival: </label>
+            <br>
+            <input type="radio" name="paid" id="paylater" value="false" >
+        </div>
+
+
+        <br/>
 
         <div class="form-group">
             <Button type="submit" class="btn btn-primary">Book</Button>
         </div>
 
         <br/>
+        
 
 
     </form>

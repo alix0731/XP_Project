@@ -18,11 +18,12 @@ public class Reservation {
     private String reservation_date;
     private int theater_id;
     private int seat_nr;
+    private boolean paid;
 
     public Reservation() {
     }
 
-    public Reservation(int reservation_id, String firstName, String lastName, int phoneNumber, String email, String movie_title, String movie_playtime, String movie_date, String reservation_date, int theater_id, int seat_nr) {
+    public Reservation(int reservation_id, String firstName, String lastName, int phoneNumber, String email, String movie_title, String movie_playtime, String movie_date, String reservation_date, int theater_id, int seat_nr, boolean paid) {
         this.reservation_id = reservation_id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,6 +35,7 @@ public class Reservation {
         this.reservation_date = reservation_date;
         this.theater_id = theater_id;
         this.seat_nr = seat_nr;
+        this.paid = paid;
     }
 
     public int getReservation_id() {
@@ -124,6 +126,14 @@ public class Reservation {
         this.seat_nr = seat_nr;
     }
 
+    public boolean isPaid() {
+        return paid;
+    }
+
+    public void setPaid(boolean paid) {
+        this.paid = paid;
+    }
+
     @Override
     public String toString() {
         return "Reservation{" +
@@ -137,7 +147,8 @@ public class Reservation {
                 ", movie_date='" + movie_date + '\'' +
                 ", reservation_date='" + reservation_date + '\'' +
                 ", theater_id=" + theater_id +
-                ", seat_ne=" + seat_nr +
+                ", seat_nr=" + seat_nr +
+                ", paid=" + paid +
                 '}';
     }
 }

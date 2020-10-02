@@ -21,7 +21,7 @@ class ReservationRepositoryTest {
     {
         Reservation r = new Reservation(0, "Hans", "Jensen", 15151515,
                 "hansJ@mail.dk", "Tenet", "19:30", "2020-11-30",
-                "2020-10-15", 2, 24);
+                "2020-10-15", 2, 24, true);
 
         assertTrue(rs.createReservation(r));
     }
@@ -31,7 +31,7 @@ class ReservationRepositoryTest {
     {
         Reservation r = new Reservation(0, "Hans", "Jensen", 12121212,
                 "hansJ@mail.dk", "Tenet", "19:30", "2020-11-30",
-                "2020-10-15", 2, 24);
+                "2020-10-15", 2, 24, true);
         rs.createReservation(r);
         Reservation newR = rs.getReservationByPhonenumber(12121212);
         assertTrue(rs.deleteReservation(newR.getReservation_id()));

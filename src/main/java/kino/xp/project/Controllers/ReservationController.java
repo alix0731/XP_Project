@@ -4,10 +4,7 @@ import kino.xp.project.Model.Reservation;
 import kino.xp.project.Service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ReservationController {
@@ -26,10 +23,11 @@ public class ReservationController {
     @PostMapping("/reservation-created")
     public String reservationCreated(@ModelAttribute Reservation reservation){
 
+
         reservationService.createReservation(reservation);
 
 
-        return "redirect:/create-reservation";
+        return "redirect:/";
     }
 
     @GetMapping("/Delete-reservation/{reservation_id}")

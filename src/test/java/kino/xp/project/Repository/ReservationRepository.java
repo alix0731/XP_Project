@@ -24,8 +24,8 @@ public class ReservationRepository {
         //Arrange
         ArrayList<Reservation> list = new ArrayList<>();
 
-        Reservation reservation1 = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20", 1, 23);
-        Reservation reservation2 = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20", 2, 33);
+        Reservation reservation1 = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20", 1, 23,true);
+        Reservation reservation2 = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20", 2, 33, false);
 
         list.add(reservation1);
         list.add(reservation2);
@@ -45,7 +45,7 @@ public class ReservationRepository {
     {
         Reservation r = new Reservation(0, "Hans", "Jensen", 12121212,
                                         "hansJ@mail.dk", "Tenet", "19:30", "2020-11-30",
-                                        "2020-10-15", 2, 24);
+                                        "2020-10-15", 2, 24, true);
         rs.createReservation(r);
         assertTrue(rs.deleteReservation(rs.getReservationByPhonenumber(12121212).getReservation_id()));
     }
