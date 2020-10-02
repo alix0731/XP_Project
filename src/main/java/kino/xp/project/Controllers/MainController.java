@@ -17,6 +17,9 @@ public class MainController {
     public String index(Model model) {
 
         model.addAttribute("movieList", movieService.listMovies());
+//        model.addAttribute("tid1", "15:00");
+//        model.addAttribute("tid2", "18:00");
+//        model.addAttribute("tid3", "21:00");
 
         return "index";
     }
