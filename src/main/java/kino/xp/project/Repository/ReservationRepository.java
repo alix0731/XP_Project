@@ -18,11 +18,11 @@ public class ReservationRepository {
 
 
     public boolean createReservation(Reservation reservation){
-        String sql = "Insert INTO reservation(firstName, lastName, phonenumber, email, movie_title, movie_playtime, movie_date, reservation_date, theater_id, seat_nr) Values(?,?,?,?,?,?,?,?,?,?)";
+        String sql = "Insert INTO reservation(firstName, lastName, phonenumber, email, movie_title, movie_playtime, movie_date, reservation_date, theater_id, seat_nr, paid) Values(?,?,?,?,?,?,?,?,?,?,?)";
         return (jdbcTemplate.update(sql, reservation.getFirstName(), reservation.getLastName(),
                 reservation.getPhoneNumber(), reservation.getEmail(), reservation.getMovie_title(),
                 reservation.getMovie_playtime(), reservation.getMovie_date(), reservation.getReservation_date(),
-                reservation.getTheater_id(), reservation.getSeat_nr()) > 0);
+                reservation.getTheater_id(), reservation.getSeat_nr(), reservation.isPaid()) > 0);
     }
 
     public boolean deleteReservation(int id)
