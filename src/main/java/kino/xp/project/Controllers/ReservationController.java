@@ -25,7 +25,7 @@ public class ReservationController {
 
 
     // Laver en getmapping path variable, så man kan hente title og tid fra forsiden til reservations siden
-    @GetMapping("/create-reservation/{title}/{id}")
+    @GetMapping("/create-reservation{title}/{id}")
     public String createReservation( @PathVariable("title") String title , @PathVariable("id") String playtime, Model model){
 
         model.addAttribute("title", title);
