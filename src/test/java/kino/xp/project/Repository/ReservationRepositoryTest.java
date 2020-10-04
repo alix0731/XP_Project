@@ -17,23 +17,37 @@ class ReservationRepositoryTest {
     ReservationService rs;
 
     @Test
-    public void createReservation()
+    public void canCreateReservation(){
+        //Arrange
+        ArrayList<Reservation> list = new ArrayList<>();
+
+        Reservation reservation1 = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20", 1, 23,true);
+        Reservation reservation2 = new Reservation(1, "Ali", "Raza", 23323232, "ali@hotmail.dk", "Tenet", "15:00", "01/10-20", "28/09-20", 2, 33, false);
+
+        list.add(reservation1);
+        list.add(reservation2);
+
+        //Act
+        int expected = reservation1.getReservation_id();
+        int actual = list.get(0).getReservation_id();
+
+        //Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void canAddReservationToDatabase()
     {
         Reservation r = new Reservation(0, "Hans", "Jensen", 15151515,
                 "hansJ@mail.dk", "Tenet", "19:30", "2020-11-30",
                 "2020-10-15", 2, 24, true);
-
         assertTrue(rs.createReservation(r));
     }
 
     @Test
-    void deleteReservation()
+    void canDeleteReservationFromDatabase()
     {
-        Reservation r = new Reservation(0, "Hans", "Jensen", 12121212,
-                "hansJ@mail.dk", "Tenet", "19:30", "2020-11-30",
-                "2020-10-15", 2, 24, true);
-        rs.createReservation(r);
-        Reservation newR = rs.getReservationByPhonenumber(12121212);
+        Reservation newR = rs.getReservationByPhonenumber(15151515);
         assertTrue(rs.deleteReservation(newR.getReservation_id()));
     }
 }
