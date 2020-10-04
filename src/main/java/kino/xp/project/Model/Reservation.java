@@ -26,7 +26,7 @@ public class Reservation {
     private int theater_id;
     private int seat_nr;
     private boolean paid;
-    //private boolean isOccupied;
+    private boolean isOccupied;
 
     public Reservation() {
     }
@@ -44,7 +44,7 @@ public class Reservation {
         this.theater_id = theater_id;
         this.seat_nr = seat_nr;
         this.paid = paid;
-        //this.isOccupied = false;
+        this.isOccupied = false;
     }
 
     public int getReservation_id() {
@@ -167,7 +167,7 @@ public class Reservation {
                 '}';
     }
 
-    /*public boolean isOccupied()
+    public boolean isOccupied()
     {
        return isOccupied;
     }
@@ -176,7 +176,7 @@ public class Reservation {
     {
         isOccupied = value;
     }
-*/
+
 }
 
 

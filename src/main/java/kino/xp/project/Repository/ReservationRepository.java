@@ -70,15 +70,26 @@ public class ReservationRepository {
         Integer numberOfSeats = jdbcTemplate.queryForObject(sql, Integer.class, theaterId);
         Integer numberOfRows = jdbcTemplate.queryForObject(sql2, Integer.class, theaterId);
         int totalSeats = (numberOfSeats) * (numberOfRows); //16 * 25
-        double percentageReserved = getNumberOfReservations(title, playtime, date)/totalSeats; //5 / (16 * 25)
+        int percentageReserved = (getNumberOfReservations(title, playtime, date)*100)/totalSeats; //5 / (16 * 25)
 
-        if(percentageReserved == 1) { //100% reserved
+        System.out.println(getNumberOfReservations(title, playtime, date));
+        System.out.println("rows " +numberOfRows);
+        System.out.println("seats " +numberOfSeats);
+        System.out.println("seats reserved = " + percentageReserved);
+
+
+
+        if(percentageReserved == 100) { //100% reserved
             return 0;
-        } else if (percentageReserved >= 0.75) { //75% reserved
+        } else if (percentageReserved >= 75) { //75% reserved
             return 1;
         } else { //less than 75% reserved
             return 2;
         }
+
+
+
+
     }
 
     public static int absoluteValue(int i) {

@@ -36,11 +36,14 @@ public class MainController {
         HashMap<String, Integer> movieMap = new HashMap<>(); // this maps displays movieReservation by their fullness
         //todo lav metode :
 
-
-        System.out.println(movieMap.entrySet());
-
         for (Planner plannedEvent: plannerService.listPlannedMovies())
         {
+
+            System.out.println(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle());
+            System.out.println(plannedEvent.getStart_time());
+            System.out.println(plannedEvent.getStartDate());
+
+
             int percentageOccupation
                     = reservationRepository  //for each Reservation in the planned event
                     .calculateSeatsReserved
@@ -51,6 +54,9 @@ public class MainController {
                             plannedEvent.getStartDate() //todo get proper date
                             );
             //skal teknisk set køre for hver individuel time (i.e. 15, 18 , 21)
+
+            System.out.println(percentageOccupation);
+
 
             movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "" + plannedEvent.getStart_time(), percentageOccupation);
         }

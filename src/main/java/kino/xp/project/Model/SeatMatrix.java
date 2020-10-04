@@ -17,17 +17,17 @@ public class SeatMatrix
     ArrayList<Reservation[]> matrix;
 
 
-    public SeatMatrix(String movie, String date, int theater, String playtime)
+    public SeatMatrix(String title, String date, int theater, String playtime)
     {
 
         //todo add check for uneven rows
 
         this.theater = theater;
         ReservationRepository repo = new ReservationRepository();
-        ArrayList<Reservation> listOfOccupiedSeats = (ArrayList<Reservation>) repo.getListOfReservationsByMovieTitleAndPlaytimeAndDate(movie, playtime, date);
 
-        //create matrix
+        System.out.println("date is  "+date);
 
+        ArrayList<Reservation> listOfOccupiedSeats = (ArrayList<Reservation>) repo.getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date);
 
 
         //theater 1 has 240, 8 rows
@@ -66,11 +66,11 @@ public class SeatMatrix
                     if (reservationFromList.getSeat_nr() == seatNumber)
                     {
                         reservation = reservationFromList;
-                        //reservation.setIsOccupied(true);
+                        reservation.setIsOccupied(true);
                     }
                     else
                     {
-                       // reservation.setIsOccupied(false);
+                        reservation.setIsOccupied(false);
                         reservation.setSeat_nr(seatNumber);
                     }
                 }

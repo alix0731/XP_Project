@@ -23,10 +23,9 @@ public class SeatMatrixTest
 
         Reservation[] firstRow = matrix.getMatrix().get(0); // gets the reservation at seat 1
 
-        //assert firstRow[0].getFirstName() == "norskerTest";
+        assert firstRow[0].getFirstName() == "norskerTest";
 
-
-
+        //reservation ligger p[ plads 120, hvilket er den 3. plads i r række 5.
     }
 
 
