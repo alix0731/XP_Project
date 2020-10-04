@@ -26,6 +26,9 @@ public class MainController {
     @Autowired
     PlannerService plannerService;
 
+    @Autowired
+    ReservationRepository reservationRepository;
+
     @GetMapping("/")
     public String index(Model model) {
 
@@ -42,7 +45,7 @@ public class MainController {
 
 
             int percentageOccupation
-                    =  new ReservationRepository() //for each Reservation in the planned event
+                    = reservationRepository  //for each Reservation in the planned event
                     .calculateSeatsReserved
                             (
                             plannedEvent.getTheater_id(),
@@ -52,8 +55,7 @@ public class MainController {
                             );
             //skal teknisk set køre for hver individuel time (i.e. 15, 18 , 21)
 
-
-            movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "/" + plannedEvent.getStart_time(), percentageOccupation);
+            movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "" + plannedEvent.getStart_time(), percentageOccupation);
         }
 
         //model.addAttribute("movieReservationTime", )
