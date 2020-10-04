@@ -1,8 +1,10 @@
 package kino.xp.project.Model;
 import kino.xp.project.Repository.ReservationRepository;
 import kino.xp.project.Service.ReservationService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -12,23 +14,17 @@ import java.util.ArrayList;
 
 public class SeatMatrix
 {
-
     int theater;
-    ArrayList<Reservation[]> matrix;
+    ArrayList<Reservation[]> matrix = new ArrayList<>();
 
-
-    public SeatMatrix(String title, String date, int theater, String playtime)
+    public SeatMatrix(int theater, List<Reservation> listOfOccupiedSeats)
     {
-
+        this.theater = theater;
         //todo add check for uneven rows
 
-        this.theater = theater;
-        ReservationRepository repo = new ReservationRepository();
-
-        System.out.println("date is  "+date);
-
-        ArrayList<Reservation> listOfOccupiedSeats = (ArrayList<Reservation>) repo.getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date);
-
+        //obs
+        //theater 1: 25 rows with 16 seats each for total of 400 seats
+        //theater 2: 20 rows with 12 seats each for total of 240 seats
 
         //theater 1 has 240, 8 rows
         //theater 2 has 180, 10 rows
@@ -57,7 +53,7 @@ public class SeatMatrix
 
             for (int j = 1; j <= totalSeats/rows; j++)
             {
-                int seatNumber = j+(count*totalSeats/rows);
+                int seatNumber = j + (count * totalSeats / rows);
                 Reservation reservation = new Reservation();
 
                 for (Reservation reservationFromList: listOfOccupiedSeats) // determine if the reservation exist or not, if not assign the correct seat number to the reservation.

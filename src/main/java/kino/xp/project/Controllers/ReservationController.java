@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class ReservationController {
@@ -40,8 +41,8 @@ public class ReservationController {
     public String selectSeats(@PathVariable("title") String title, @PathVariable("playtime") String playtime,
                               @PathVariable("date") String date, @PathVariable("theater") int theater, Model model)
     {
-
-        model.addAttribute("matrix", new SeatMatrix(title, date, theater, playtime));
+        List<Reservation> listOfReservationsForSpecificMovie = reservationService.getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date);
+        model.addAttribute("matrix", new SeatMatrix(theater, listOfReservationsForSpecificMovie));
 
 
         return "seat-selector";
