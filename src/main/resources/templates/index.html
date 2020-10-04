@@ -43,7 +43,25 @@
                 <p th:text="${movie.genre}"></p>
 
                 <div>
-                    <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15}}" class="btn btn-success">15:00</a>
+
+                    <div th:if="${movieMap.key == movie.getTitle+15}"></div>
+                    <div th:if="${movieMap.key == movie.getTitle+18}"></div>
+                    <div th:if="${movieMap.key == movie.getTitle+21}"></div>
+
+
+                    <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15}}" class="btn btn-success"> <!--if reservation list
+                    (where
+                    reservation time = time of the movie
+                    reservation date = date of the movie
+                    reservation title = title of the movie
+                    ).getClaculation of remaining seat == 0 -> color = red
+
+                    ->  et set af ints, hvor key = movieNavnTitelDato, value = %seatsRemaining
+
+
+
+
+                    -->15:00</a>
                     <a  th:href="@{'/create-reservation' + ${movie.title} + '/' + ${18}}" class="btn btn-success">18:00</a>
                     <a th:href="@{'/create-reservation'  + ${movie.title} + '/' + ${21}}" class="btn btn-success">21:00</a>
                 </div>
