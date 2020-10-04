@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>KinoXp</title>
@@ -29,113 +29,26 @@
     <div class="container">
         <hr/>
         <div class="row justify-content-center">
+            <span class="services" style="padding: 30px" th:each="movie:${movieList}">
 
-            <span class="services" style="padding: 30px">
-                <img width="200" height="300" src="tent.jpg" alt="MoviePoster">
-                <h5>Tenet: Premiere</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:48m</p>
-                <p>Genre: Thriller</p>
-                <p>Pris: 75-95 kr</p>
-                <div>
-                    <a href="/create-reservation" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
-            </span>
-            <span class="services" style="padding: 30px">
-                <img width="200" height="300" src="afterposter.jpg" alt="MoviePoster">
-                <h5>After</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:28m</p>
-                <p>Genre: Horror</p>
-                <p>Pris: 65-95 kr</p>
+
+
+                <img width="200" height="300" th:src="${movie.poster}" alt="MoviePoster">
+
+
+                <p th:text="${movie.title}"></p>
+                <p th:text="${movie.duration}"></p>
+                <p th:text="${movie.price_rank}"></p>
+                <p th:text="${movie.actors}"></p>
+                <p th:text="${movie.genre}"></p>
 
                 <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
+                    <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15} }" class="btn btn-success">15:00</a>
+                    <a  th:href="@{'/create-reservation' + ${movie.title} + '/' + ${18}}" class="btn btn-success">18:00</a>
+                    <a th:href="@{'/create-reservation'  + ${movie.title} + '/' + ${21}}" class="btn btn-success">21:00</a>
                 </div>
             </span>
 
-            <span class="services" style="padding: 30px">
-                <img width="200" height="300" src="afterposter.jpg" alt="MoviePoster">
-                <h5>After</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:28m</p>
-                <p>Genre: Horror</p>
-                <p>Pris: 65-95 kr</p>
-
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
-            </span>
-
-
-            <!-- -->
-
-            <span class="services" style="padding: 30px">
-                <img width="200" height="300" src="afterposter.jpg" alt="MoviePoster">
-                <h5>After</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:28m</p>
-                <p>Genre: Horror</p>
-                <p>Pris: 65-95 kr</p>
-
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
-            </span>
-
-            <span class="services" style="padding: 30px">
-                <img width="200" height="300" src="afterposter.jpg" alt="MoviePoster">
-                <h5>After</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:28m</p>
-                <p>Genre: Horror</p>
-                <p>Pris: 65-95 kr</p>
-
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
-            </span>
-
-
-            <!-- -->
-
-            <span class="services" style="padding: 30px">
-                <img width="200" height="300" src="underwater.jpg" alt="MoviePoster">
-                <h5>Underwater</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 2t:21m</p>
-                <p>Genre: Action</p>
-                <p>Pris: 65-95 kr</p>
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
-            </span>
-
-            <span class="services" style="padding: 30px">
-                <img width="200" height="300" src="call-poster.jpg" alt="MoviePoster">
-                <h5>Call of the wild</h5>
-                <p>Instruktør: Christofer Nolan</p>
-                <p>Varighed: 1t:58m</p>
-                <p>Genre: Sci-Fi</p>
-                <p>Pris: 65-95 kr</p>
-                <div>
-                    <a href="#" class="btn btn-success">15:00</a>
-                    <a href="#" class="btn btn-success">18:00</a>
-                    <a href="#" class="btn btn-success">21:00</a>
-                </div>
-            </span>
         </div>
     </div>
 
