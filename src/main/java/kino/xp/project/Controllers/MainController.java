@@ -1,4 +1,4 @@
-package kino.xp.project.controllers;
+package kino.xp.project.Controllers;
 
 
 import kino.xp.project.Model.Movie;
@@ -34,11 +34,11 @@ public class MainController {
 
         model.addAttribute("movieList", movieService.listMovies());
 
-        Map movieMap = new HashMap<String, Integer>(); // this maps displays movieReservation by their fullness
+        HashMap<String, Integer> movieMap = new HashMap<String, Integer>(); // this maps displays movieReservation by their fullness
         //todo lav metode :
 
 
-
+        System.out.println(movieMap.entrySet());
 
         for (Planner plannedEvent: plannerService.listPlannedMovies())
         {
@@ -58,7 +58,10 @@ public class MainController {
             movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "" + plannedEvent.getStart_time(), percentageOccupation);
         }
 
-        //model.addAttribute("movieReservationTime", )
+        System.out.println(movieMap.entrySet());
+
+
+        model.addAttribute("movieMap", movieMap);
 
         return "index";
     }
