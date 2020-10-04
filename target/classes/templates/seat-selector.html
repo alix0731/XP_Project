@@ -1,0 +1,27 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+</div>
+<div class="modal-body">
+    <table> <!-- this snippet will generate seats based on a matrix with row and columns-->
+        <tbody>
+        <tr th:each="row : ${matrix}">
+            <td th:each="reservation : ${row}">
+                <!--/*@thymesVar id="reservation" type="kino/xp/project/Model/Reservation.java"*/-->
+                <if th:if="${reservation.isOccupied()}">
+                    <input type="checkbox" class="seats" th:value="${reservation.getSeat_nr()}"> <!-- -->
+                </if>
+                <else>
+                    <input type="checkbox" class="seats" th:value="${reservation.getSeat_nr()}"> <!-- if the reservation is not reserved make clickable. -->
+                </else>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- maybe todo create script that sends a create-reservation-post for each seat-->
+</div>
+
+
+</html>
+

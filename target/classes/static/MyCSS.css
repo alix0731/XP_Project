@@ -1,0 +1,54 @@
+#createForm {
+    width: 300px;
+    text-align: right;
+}
+#saveButton{
+    height: 25px;
+    width: 65px;
+    background-color: lightgreen;
+    margin-bottom: 5px;
+}
+#deleteButton
+{
+    background-color: crimson;
+    color: white;
+}
+#backButton{
+    height: 25px;
+    width: 65px;
+    background-color: lightpink;
+    margin-bottom: 5px;
+}
+
+#row {
+    padding-left: 4vw;
+}
+
+.footy{
+    position: center;
+    padding-top: 2%;
+
+}
+
+#right{
+    padding-left:4vw;
+}
+table{
+    background-color: gray;
+    border-collapse: collapse;
+    width: 85%;
+}
+th{
+    background-color: lightgray;
+}
+td, th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 2px;
+}
+tr:nth-child(even){
+    background-color: lightcoral;
+}
+tr{
+    height: 40px;
+}

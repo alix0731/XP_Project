@@ -67,22 +67,21 @@ public class ReservationRepository {
         String sql = "SELECT seats FROM theaters WHERE theater_id = ?";
         String sql2 = "SELECT rows FROM theaters WHERE theater_id = ?";
 
-        RowMapper<Integer> rm = new BeanPropertyRowMapper<>(Integer.class);
-        Integer numberOfSeats = jdbcTemplate.queryForObject(sql, rm, theaterId);
-        Integer numberOfRows = jdbcTemplate.queryForObject(sql2, rm, theaterId);
-        int totalSeats = numberOfSeats * numberOfRows;
+        Integer numberOfSeats = jdbcTemplate.queryForObject(sql, Integer.class, theaterId);
+        Integer numberOfRows = jdbcTemplate.queryForObject(sql2, Integer.class, theaterId);
+        int totalSeats = (numberOfSeats) * (numberOfRows); //16 * 25
+        double percentageReserved = getNumberOfReservations(title, playtime, date)/totalSeats; //5 / (16 * 25)
 
-        double percentageReserved = getNumberOfReservations(title, playtime, date)/totalSeats;
-
-        //Hvis metoden returnerer 0 er der fuldt optaget, 1: 75% eller mere optaget, 2: under 75%
-        if(percentageReserved == 1) {
+        if(percentageReserved == 1) { //100% reserved
             return 0;
-        } else if(percentageReserved >=0.75) {
+        } else if (percentageReserved >= 0.75) { //75% reserved
             return 1;
-        } else {
+        } else { //less than 75% reserved
             return 2;
         }
     }
 
-
+    public static int absoluteValue(int i) {
+        return (i < 0) ? -i : i;
+    }
 }
