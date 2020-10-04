@@ -31,10 +31,9 @@ public class MainController {
 
     @GetMapping("/")
     public String index(Model model) {
-
         model.addAttribute("movieList", movieService.listMovies());
 
-        HashMap<String, Integer> movieMap = new HashMap<String, Integer>(); // this maps displays movieReservation by their fullness
+        HashMap<String, Integer> movieMap = new HashMap<>(); // this maps displays movieReservation by their fullness
         //todo lav metode :
 
 
@@ -42,8 +41,6 @@ public class MainController {
 
         for (Planner plannedEvent: plannerService.listPlannedMovies())
         {
-
-
             int percentageOccupation
                     = reservationRepository  //for each Reservation in the planned event
                     .calculateSeatsReserved
@@ -57,10 +54,6 @@ public class MainController {
 
             movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "" + plannedEvent.getStart_time(), percentageOccupation);
         }
-
-        System.out.println(movieMap.entrySet());
-
-
         model.addAttribute("movieMap", movieMap);
 
         return "index";

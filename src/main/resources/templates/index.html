@@ -50,23 +50,22 @@
 
                     </div>
                      <div th:if="${key.contains(movie.getTitle())}">
-
                          <div th:if="${key.contains('15-00')}">
-                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success-red" >10:00</a> <!--no seats left, color = red -->
-                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success-yellow" >15:00</a> <!-- <75% seats left, color yellow -->
-                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success-green" >20:00</a> <!-- no seats taken, color = green -->
+                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success-red" >15:00</a> <!--no seats left, color = red -->
+                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success-yellow" >15:00</a> <!-- <75% seats left, color yellow -->
+                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success-green" >15:00</a> <!-- no seats taken, color = green -->
 
                          </div>
                          <div th:if="${key.contains('18-00')}">
-                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success-red" >10:00</a> <!--no seats left, color = red -->
-                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success-yellow" >15:00</a> <!-- <75% seats left, color yellow -->
-                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success-green" >20:00</a> <!-- no seats taken, color = green -->
+                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success-red" >18:00</a> <!--no seats left, color = red -->
+                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success-yellow" >18:00</a> <!-- <75% seats left, color yellow -->
+                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success-green" >18:00</a> <!-- no seats taken, color = green -->
 
                          </div>
                          <div th:if="${key.contains('21-00')}">
-                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success-red" >10:00</a> <!--no seats left, color = red -->
-                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success-yellow" >15:00</a> <!-- <75% seats left, color yellow -->
-                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success-green" >20:00</a> <!-- no seats taken, color = green -->
+                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success-red" >21:00</a> <!--no seats left, color = red -->
+                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success-yellow" >21:00</a> <!-- <75% seats left, color yellow -->
+                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success-green" >21:00</a> <!-- no seats taken, color = green -->
 
                          </div>
                                                  </div>
