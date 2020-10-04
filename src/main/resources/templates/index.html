@@ -30,6 +30,7 @@
         <hr/>
         <div class="row justify-content-center">
             <span class="services" style="padding: 30px" th:each="movie:${movieList}">
+                 <span class="services" style="padding: 30px" th:each="theater:${theaterList}">
 
 
 
@@ -41,12 +42,15 @@
                 <p th:text="${movie.price_rank}"></p>
                 <p th:text="${movie.actors}"></p>
                 <p th:text="${movie.genre}"></p>
+                <p th:text="${theater.seats}">Antal Pladser: </p>
+                <p th:text="${theater.theater_id}">Sal: </p>
 
                 <div>
                     <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15}}" class="btn btn-success">15:00</a>
                     <a  th:href="@{'/create-reservation' + ${movie.title} + '/' + ${18}}" class="btn btn-success">18:00</a>
                     <a th:href="@{'/create-reservation'  + ${movie.title} + '/' + ${21}}" class="btn btn-success">21:00</a>
                 </div>
+            </span>
             </span>
 
         </div>

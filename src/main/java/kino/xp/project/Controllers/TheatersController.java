@@ -1,7 +1,6 @@
+/*
 package kino.xp.project.Controllers;
 
-
-import kino.xp.project.Service.MovieService;
 import kino.xp.project.Service.TheaterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,23 +8,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MainController {
-
-    @Autowired
-    MovieService movieService;
+public class TheatersController {
 
     @Autowired
     TheaterService theaterService;
 
     @GetMapping("/")
     public String index(Model model) {
-
-        model.addAttribute("movieList", movieService.listMovies());
-        model.addAttribute("theaterList", theaterService.listTheaters());
-//        model.addAttribute("tid1", "15:00");
-//        model.addAttribute("tid2", "18:00");
-//        model.addAttribute("tid3", "21:00");
-
+       model.addAttribute("theater", theaterService.listTheaters());
         return "index";
     }
 }
+
+*/
