@@ -1,11 +1,19 @@
-package kino.xp.project.Controllers;
+/**
+ * @Edit Emil Norsker 3/10/20: added method for selection of seats.
+ */
 
+
+
+package kino.xp.project.Controllers;
 import kino.xp.project.Model.Reservation;
+import kino.xp.project.Model.SeatMatrix;
 import kino.xp.project.Service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @Controller
 public class ReservationController {
@@ -23,9 +31,22 @@ public class ReservationController {
         model.addAttribute("title", title);
         model.addAttribute("playtime", playtime);
 
-        return "reservationPage";
 
+        return "reservationPage";
     }
+
+
+    @GetMapping("/create-reservation/select-seats/{title}/{playtime}/{date}/{theater}")
+    public String selectSeats(@PathVariable("title") String title, @PathVariable("playtime") String playtime,
+                              @PathVariable("date") String date, @PathVariable("theater") int theater, Model model)
+    {
+
+        model.addAttribute("matrix", new SeatMatrix(title, date, theater, playtime));
+
+
+        return "seat-selector";
+    }
+
 
     @PostMapping("/reservation-created")
     public String reservationCreated(@ModelAttribute Reservation reservation){
@@ -44,4 +65,16 @@ public class ReservationController {
 
         return "redirect:/";
     }
+
+
+    @GetMapping("")
+    public String seatSelector()
+    {
+        //requires some information about the matrix of seats. ie Matrix = [10, 5] is a room of 10 rows and
+
+        return "seat-selector";
+    }
+
+
+
 }

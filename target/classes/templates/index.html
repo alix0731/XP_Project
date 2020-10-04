@@ -43,7 +43,7 @@
                 <p th:text="${movie.genre}"></p>
 
                 <div>
-                    <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15} }" class="btn btn-success">15:00</a>
+                    <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15}}" class="btn btn-success">15:00</a>
                     <a  th:href="@{'/create-reservation' + ${movie.title} + '/' + ${18}}" class="btn btn-success">18:00</a>
                     <a th:href="@{'/create-reservation'  + ${movie.title} + '/' + ${21}}" class="btn btn-success">21:00</a>
                 </div>
