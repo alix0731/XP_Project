@@ -6,6 +6,7 @@ import kino.xp.project.Model.Planner;
 import kino.xp.project.Model.Reservation;
 import kino.xp.project.Repository.ReservationRepository;
 import kino.xp.project.Service.MovieService;
+import kino.xp.project.Service.PlannerService;
 import kino.xp.project.Service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,9 @@ public class MainController {
     @Autowired
     MovieService movieService;
 
+    @Autowired
+    PlannerService plannerService;
+
     @GetMapping("/")
     public String index(Model model) {
 
@@ -33,7 +37,7 @@ public class MainController {
 
 
 
-        for (Planner plannedEvent: PlannerService/repo)
+        for (Planner plannedEvent: plannerService.listPlannedMovies())
         {
 
 
@@ -49,7 +53,7 @@ public class MainController {
             //skal teknisk set køre for hver individuel time (i.e. 15, 18 , 20)
 
 
-            movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "" + plannedEvent.getStart_time(), );
+            movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "/" + plannedEvent.getStart_time(), percentageOccupation);
         }
 
         //model.addAttribute("movieReservationTime", )
