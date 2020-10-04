@@ -1,4 +1,4 @@
-package kino.xp.project.Controllers;
+package kino.xp.project.controllers;
 
 import kino.xp.project.Model.Reservation;
 import kino.xp.project.Service.ReservationService;
@@ -32,6 +32,7 @@ public class ReservationController {
 
 
         reservationService.createReservation(reservation);
+        System.out.println(reservation);
 
 
         return "redirect:/";

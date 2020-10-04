@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>KinoXp</title>
@@ -37,7 +37,7 @@
 
 
                 <p th:text="${movie.title}"></p>
-                <p th:text="${movie.duration}"></p>
+                <p th:text="'Varighed: ' + ${movie.duration} + ' minutter'"></p>
                 <p th:text="${movie.price_rank}"></p>
                 <p th:text="${movie.actors}"></p>
                 <p th:text="${movie.genre}"></p>
