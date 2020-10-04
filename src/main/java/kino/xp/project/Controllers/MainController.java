@@ -53,7 +53,7 @@ public class MainController {
                             plannedEvent.getStart_time(),
                             plannedEvent.getStartDate() //todo get proper date
                             );
-            //skal teknisk set køre for hver individuel time (i.e. 15, 18 , 20)
+            //skal teknisk set køre for hver individuel time (i.e. 15, 18 , 21)
 
             movieMap.put(movieService.getMovieById(plannedEvent.getMovie_id()).getTitle() + "" + plannedEvent.getStart_time(), percentageOccupation);
         }
