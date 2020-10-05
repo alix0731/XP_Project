@@ -108,12 +108,14 @@
         <br/>
 
         <div claas="form-group">
+            <!-- <div th:replace="fragments/modals/seat-selector :: seat-selector(${matrix})"> </div>
+            -->
             <label for="seat">Seat number:</label>
             <input type="number" id="seat" name="seat_nr" class="form-control" required>
         </div>
 
         <br/>
-        
+        <!-- todo remove? -->
         <div class="form-group">
             <label for="paid">Pay now:</label>
             <img th:height="25px" src="https://logodix.com/logo/878247.png" alt="card logo">

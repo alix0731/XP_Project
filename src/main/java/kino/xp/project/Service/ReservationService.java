@@ -6,6 +6,8 @@ import kino.xp.project.Repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ReservationService {
 
@@ -36,4 +38,8 @@ public class ReservationService {
         return reservationRepository.calculateSeatsReserved(theaterId, title, playtime, date);
     }
 
+    public List<Reservation> getListOfReservationsByMovieTitleAndPlaytimeAndDate(String title, String playtime, String date)
+    {
+        return reservationRepository.getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date);
+    }
 }
