@@ -48,6 +48,30 @@ public class ReservationController {
         return "seat-selector";
     }
 
+    /*
+
+    @GetMapping("/create-reservation/")
+    public String addReservations(@RequestParam("seats") String[] seats,Model model)
+    {
+
+        return "seat-selector";
+    }
+
+
+     */
+    @GetMapping("/create-reservations/with-seats")
+    public String addReservations(@RequestParam("seats") String seats,Model model)
+    {
+        System.out.println("seats are = " +seats);
+
+        //todo split seats, crete a reervation for each seat
+
+
+        return "redirect:/";
+    }
+
+
+
 
     @PostMapping("/reservation-created")
     public String reservationCreated(@ModelAttribute Reservation reservation){

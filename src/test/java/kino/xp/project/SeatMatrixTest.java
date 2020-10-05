@@ -2,31 +2,41 @@ package kino.xp.project;
 
 import kino.xp.project.Model.Reservation;
 import kino.xp.project.Model.SeatMatrix;
+import kino.xp.project.Service.MovieService;
+import kino.xp.project.Service.ReservationService;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SeatMatrixTest
 {
 
+    @Autowired
+    ReservationService reservationService;
 
 
 
-//    public void getMatrix()
-//    {
-//        //create availiable seats
-//
-//
-//        //3x3 matrix
-//
-//        //date is for testing and will have specific entries in the DB.
-//        SeatMatrix matrix = new SeatMatrix("15-04-97", "test", 1, "test");
-//
-//        Reservation[] firstRow = matrix.getMatrix().get(0); // gets the reservation at seat 1
-//
-//        assert firstRow[0].getFirstName() == "norskerTest";
-//
-//        //reservation ligger p[ plads 120, hvilket er den 3. plads i r række 5.
-//    }
+    @Test
+   public void getMatrix()
+   {
+       //create availiable seats
+
+
+       //date is for testing and will have specific entries in the DB.
+
+       List<Reservation> listOfReservationsForSpecificMovie = reservationService.getListOfReservationsByMovieTitleAndPlaytimeAndDate("Shrek10", "18-00" , "2020-10-04");
+
+       SeatMatrix matrix = new SeatMatrix(1,  listOfReservationsForSpecificMovie);
+
+       Reservation[] secondRow = matrix.getMatrix().get(1); // gets the reservation at seat 1
+
+       System.out.println(secondRow[8].getSeat_nr());
+       //assert secondRow[8].getFirstName().equals("Hans");
+
+       //reservation ligger på plads 24, hvilket er den 8. plads i række 2.
+   }
 
 
 }
