@@ -61,6 +61,12 @@ public class SeatMatrix
                 int seatNumber = j + rowMultiplier;
                 Reservation reservation = new Reservation();
 
+
+                reservation.setIsOccupied(false);
+                reservation.setSeat_nr(seatNumber);
+
+
+
                 for (Reservation reservationFromList: listOfOccupiedSeats) // determine if the reservation exist or not, if not assign the correct seat number to the reservation.
                 {
 

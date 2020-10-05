@@ -41,13 +41,13 @@ public class ReservationController {
     public String createReservationWithSeats(@PathVariable("title") String title, @PathVariable("playtime") String playtime,
                                              @PathVariable("date") String date, @PathVariable("theater") int theater,@RequestParam("seats") String seats, Model model){
 
-        System.out.println("seats are :" +seats);
         model.addAttribute("title", title);
         model.addAttribute("playtime", playtime);
         model.addAttribute("date", date);
-        model.addAttribute("playtime", theater);
+        model.addAttribute("theater", theater);
         model.addAttribute("seats", seats);
 
+        System.out.println("seats are :" +seats);
 
         return "reservationPage";
     }
@@ -62,11 +62,10 @@ public class ReservationController {
     {
         List<Reservation> listOfReservationsForSpecificMovie = reservationService.getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date);
         model.addAttribute("matrix", new SeatMatrix(theater, listOfReservationsForSpecificMovie));
-
         model.addAttribute("title", title);
         model.addAttribute("playtime", playtime);
         model.addAttribute("date", date);
-        model.addAttribute("playtime", theater);
+        model.addAttribute("theater", theater);
 
 
 
@@ -76,7 +75,7 @@ public class ReservationController {
     @GetMapping("/create-reservations/with-seats")
     public String addReservations(@RequestParam("seats") String seats,Model model)
     {
-        System.out.println("seats are = " +seats);
+        //System.out.println("seats are = " +seats);
 
         //todo split seats, crete a reervation for each seat
 
@@ -88,10 +87,53 @@ public class ReservationController {
 
 
     @PostMapping("/reservation-created")
-    public String reservationCreated(@ModelAttribute Reservation reservation){
+    public String reservationCreated(@ModelAttribute Reservation reservation, @RequestParam("seats") String seats){
 
 
-        reservationService.createReservation(reservation);
+
+        String[] splitSeats = seats.split(" , ");
+        System.out.println("seat string "+seats+ "  total length  "+splitSeats.length);
+
+
+        System.out.println(splitSeats.length);
+
+        Reservation rsv = new Reservation();
+        rsv.setReservation_id(reservation.getReservation_id());
+
+        for (String seat: splitSeats)
+        {
+
+
+
+            if (!seat.isEmpty()) {
+
+                System.out.println("id =  " + rsv.getReservation_id());
+
+
+
+                rsv.setFirstName(reservation.getFirstName());
+                rsv.setLastName(reservation.getLastName());
+                rsv.setEmail(reservation.getEmail());
+                rsv.setMovie_date(reservation.getMovie_date());
+                rsv.setReservation_date(reservation.getReservation_date());
+                rsv.setMovie_playtime(reservation.getMovie_playtime());
+                rsv.setTheater_id(reservation.getTheater_id());
+                rsv.setMovie_title(reservation.getMovie_title());
+
+
+
+
+                rsv.setSeat_nr(Integer.parseInt(seat));
+
+
+                reservationService.createReservation(rsv);
+
+                rsv.setReservation_id(rsv.getReservation_id()+1);
+
+
+            }
+        }
+
 
 
         return "redirect:/";
