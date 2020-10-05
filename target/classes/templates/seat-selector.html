@@ -79,7 +79,7 @@
     </table>
 
 
-    <form id="my-form" name="theForm" action="/create-reservations/with-seats">
+    <form id="my-form" name="theForm" th:action="@{'/create-reservations-with-seats'+${title} + '/' + ${playtime}+ '/' + ${date} + '/' + ${theater}}">
         <input type="text" id="seats" value="" name="seats" form="my-form" style="display: none">
         <input type="button" onclick="submitBtn()" form="my-form">
     </form>
