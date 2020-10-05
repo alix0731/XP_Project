@@ -33,6 +33,11 @@ public class ReservationService {
         return reservationRepository.getReservationByPhonenumber(nr);
     }
 
+    public Reservation getReservationById(int id)
+    {
+        return reservationRepository.getReservationById(id);
+    }
+
     public int calculateSeatsReserved(int theaterId, String title, String playtime, String date)
     {
         return reservationRepository.calculateSeatsReserved(theaterId, title, playtime, date);

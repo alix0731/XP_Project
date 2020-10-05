@@ -43,11 +43,18 @@ public class ReservationRepository {
 //                            r.getReservation_id());
 //    }
 
-    public Reservation getReservationByPhonenumber(int nr)
+    public List<Reservation> getReservationByPhonenumber(int nr)
     {
         String sql = "SELECT * FROM reservation WHERE phoneNumber = ?";
         RowMapper<Reservation> rm = new BeanPropertyRowMapper<>(Reservation.class);
-        return jdbcTemplate.queryForObject(sql, rm, nr);
+        return jdbcTemplate.query(sql, rm, nr);
+    }
+
+    public Reservation getReservationById(int id)
+    {
+        String sql = "SELECT * FROM reservation WHERE reservation_id = ?";
+        RowMapper<Reservation> rm = new BeanPropertyRowMapper<>(Reservation.class);
+        return jdbcTemplate.queryForObject(sql, rm, id);
     }
 
     public List<Reservation> getListOfReservationsByMovieTitleAndPlaytimeAndDate(String title, String playtime, String date)
@@ -71,14 +78,6 @@ public class ReservationRepository {
         Integer numberOfRows = jdbcTemplate.queryForObject(sql2, Integer.class, theaterId);
         int totalSeats = (numberOfSeats) * (numberOfRows); //16 * 25
         int percentageReserved = (getNumberOfReservations(title, playtime, date)*100)/totalSeats; //5 / (16 * 25)
-
-
-//        System.out.println(getNumberOfReservations(title, playtime, date));
-//        System.out.println("rows " +numberOfRows);
-//        System.out.println("seats " +numberOfSeats);
-//        System.out.println("seats reserved = " + percentageReserved);
-
-
 
         if(percentageReserved == 100) { //100% reserved
             return 0;
