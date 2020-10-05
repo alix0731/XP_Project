@@ -1,13 +1,14 @@
 package kino.xp.project.Controllers;
 
 import kino.xp.project.Model.Reservation;
-import kino.xp.project.Repository.ReservationRepository;
 import kino.xp.project.Service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
  * @Author Jonas, Jonathan
@@ -25,8 +26,8 @@ public class FilterController {
     public String getFilter(Model model, @RequestParam("tlf") int tlf)
     {
         try {
-            Reservation reservation = reservationService.getReservationByPhonenumber(tlf);
-            model.addAttribute("reservation", reservation);
+            List list = reservationService.getReservationByPhonenumber(tlf);
+            model.addAttribute("reservation", list);
             System.out.println(reservationService.getReservationByPhonenumber(tlf));
             return "filterReservation";
         }catch (Exception e){
