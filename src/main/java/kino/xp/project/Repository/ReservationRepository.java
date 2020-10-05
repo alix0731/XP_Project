@@ -43,11 +43,16 @@ public class ReservationRepository {
 //                            r.getReservation_id());
 //    }
 
-    public Reservation getReservationByPhonenumber(int nr)
+    public List<Reservation> getReservationByPhonenumber(int nr)
     {
         String sql = "SELECT * FROM reservation WHERE phoneNumber = ?";
         RowMapper<Reservation> rm = new BeanPropertyRowMapper<>(Reservation.class);
-        return jdbcTemplate.queryForObject(sql, rm, nr);
+        return jdbcTemplate.query(sql, rm, nr);
+    }
+
+    public Reservation getReservationById(int id)
+    {
+        String sql = 
     }
 
     public List<Reservation> getListOfReservationsByMovieTitleAndPlaytimeAndDate(String title, String playtime, String date)
