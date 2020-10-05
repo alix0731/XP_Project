@@ -37,28 +37,41 @@ public class ReservationController {
     }
 
 
-    @GetMapping("/create-reservation/select-seats/{title}/{playtime}/{date}/{theater}")
+    @GetMapping("/create-reservation/{title}/{playtime}/{date}/{theater}/") //[3]
+    public String createReservationWithSeats(@PathVariable("title") String title, @PathVariable("playtime") String playtime,
+                                             @PathVariable("date") String date, @PathVariable("theater") String theater,@RequestParam("seats") String seats, Model model){
+
+        model.addAttribute("title", title);
+        model.addAttribute("playtime", playtime);
+        model.addAttribute("date", date);
+        model.addAttribute("playtime", theater);
+        model.addAttribute("seats", seats);
+
+
+        return "reservationPage";
+    }
+
+
+
+
+
+    @GetMapping("/create-reservation/select-seats/{title}/{playtime}/{date}/{theater}") //[2]
     public String selectSeats(@PathVariable("title") String title, @PathVariable("playtime") String playtime,
                               @PathVariable("date") String date, @PathVariable("theater") int theater, Model model)
     {
         List<Reservation> listOfReservationsForSpecificMovie = reservationService.getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date);
         model.addAttribute("matrix", new SeatMatrix(theater, listOfReservationsForSpecificMovie));
 
+        model.addAttribute("title", title);
+        model.addAttribute("playtime", playtime);
+        model.addAttribute("date", date);
+        model.addAttribute("playtime", theater);
+
+
 
         return "seat-selector";
     }
 
-    /*
-
-    @GetMapping("/create-reservation/")
-    public String addReservations(@RequestParam("seats") String[] seats,Model model)
-    {
-
-        return "seat-selector";
-    }
-
-
-     */
     @GetMapping("/create-reservations/with-seats")
     public String addReservations(@RequestParam("seats") String seats,Model model)
     {

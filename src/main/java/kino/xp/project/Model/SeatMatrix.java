@@ -49,7 +49,6 @@ public class SeatMatrix
         //create matrix
 
         int count = 0;
-        System.out.println(rows);
 
         for (int i = 0; i < rows; i++) //this fills the matrix by making lists of reservation arrays, and appending them to the matrix object.
         {
