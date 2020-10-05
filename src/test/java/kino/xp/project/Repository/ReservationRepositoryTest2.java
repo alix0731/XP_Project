@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.ArrayList;
 
 @SpringBootTest
-public class ReservationRepository {
+public class ReservationRepositoryTest2 {
 
     @Autowired
     ReservationService rs;
