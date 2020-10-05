@@ -28,7 +28,7 @@ public class ReservationService {
 //        reservationService.updateReservation(reservation);
 //    }
 
-    public Reservation getReservationByPhonenumber(int nr)
+    public List<Reservation> getReservationByPhonenumber(int nr)
     {
         return reservationRepository.getReservationByPhonenumber(nr);
     }
