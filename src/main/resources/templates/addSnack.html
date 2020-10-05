@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>addSnack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link th:href="@{style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="MyCSS.css">
+    <style>
+        body{
+            background-color: black;
+        }
+
+
+        .services {
+            padding: 30px;
+        }
+
+
+        #logo{
+            padding: 10px;
+        }
+
+        div{
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+<header th:replace="fragments/header :: header">
+</header>
+
+    <div class="container">
+        <div id="createForm">
+            <form action="/addSnack" method="post">
+                Navn: <input type="text" name="name"                required oninvalid="this.setCustomValidity('Indtast venligst et navn')" oninput=this.setCustomValidity('')><br>
+                Pris: <input type="number" name="price"             required oninvalid="this.setCustomValidity('Indtast venligst prisen')" oninput=this.setCustomValidity('')><br>
+                Link af billede: <input type="text" name="img"      required oninvalid="this.setCustomValidity('Indtast venligst et link')" oninput=this.setCustomValidity('')><br>
+                <input type="submit" value="Gem" id="saveButton">
+                <button type="button" id="backButton" onclick="back()">Tilbage</button>
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
