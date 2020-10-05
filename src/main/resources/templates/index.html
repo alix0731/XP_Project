@@ -25,7 +25,10 @@
 </header>
 
 <main>
-
+    <form action="/" method="post">
+        <input type="date" name="pickedDate" th:value="${currentDate}">
+        <input type="submit" value="Vælg dato" style="background: red; height: 5vh; color: white">
+    </form>
     <div class="container">
         <hr/>
         <div class="row justify-content-center">
@@ -107,7 +110,6 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 
 </body>
 </html>

@@ -44,7 +44,7 @@ class ReservationRepositoryTest {
     @Order(2)
     public void canAddReservationToDatabase()
     {
-        Reservation r = new Reservation(0, "Hans", "Jensen", 15151515,
+        Reservation r = new Reservation(0, "Hans", "Jensen", 98989898,
                 "hansJ@mail.dk", "Tenet", "19:30", "2020-11-30",
                 "2020-10-15", 2, 24, true);
         assertTrue(rs.createReservation(r));

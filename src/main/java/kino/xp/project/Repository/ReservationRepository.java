@@ -72,13 +72,6 @@ public class ReservationRepository {
         int totalSeats = (numberOfSeats) * (numberOfRows); //16 * 25
         int percentageReserved = (getNumberOfReservations(title, playtime, date)*100)/totalSeats; //5 / (16 * 25)
 
-        System.out.println(getNumberOfReservations(title, playtime, date));
-        System.out.println("rows " +numberOfRows);
-        System.out.println("seats " +numberOfSeats);
-        System.out.println("seats reserved = " + percentageReserved);
-
-
-
         if(percentageReserved == 100) { //100% reserved
             return 0;
         } else if (percentageReserved >= 75) { //75% reserved
