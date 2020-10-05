@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>KinoXp</title>
@@ -76,35 +76,20 @@
     <div class="container">
         <hr/>
         <div class="row justify-content-center">
+            <span class="services" style="padding: 30px" th:each="movie:${movieList}">
 
-            <span class="services">
-                <img width="200" height="300" src="tent.jpg" alt="MoviePoster">
-                <h5>Tenet: Premiere</h5>
-                <p>Solgte billetter: 76</p>
-                <p>Pris: 75-95 kr</p>
-            </span>
-            <span class="services">
-                <img width="200" height="300" src="afterposter.jpg" alt="MoviePoster">
-                <h5>After</h5>
-                <p>Solgte billetter: 35</p>
-                <p>Pris: 65-95 kr</p>
+                <img width="200" height="300" th:src="${movie.poster}" alt="MoviePoster">
+
+
+                <p th:text="${movie.title}"></p>
+                <p th:text="'Solgte billetter: ' + ${randomNumber.get(movieList.indexOf(movie))}"></p>
+                <p th:text="'Pris: ' + ${movie.price_rank} + ' kr.'"></p>
             </span>
 
-            <span class="services">
-                <img width="200" height="300" src="underwater.jpg" alt="MoviePoster">
-                <h5>Underwater</h5>
-                <p>Solgte billetter: 57</p>
-                <p>Pris: 65-95 kr</p>
-            </span>
-
-            <span class="services">
-                <img width="200" height="300" src="call-poster.jpg" alt="MoviePoster">
-                <h5>Call of the wild</h5>
-                <p>Solgte billetter: 23</p>
-                <p>Pris: 65-95 kr</p>
-            </span>
         </div>
     </div>
+
+
 </main>
 
 <footer>

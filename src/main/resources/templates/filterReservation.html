@@ -51,6 +51,10 @@
                     <td th:text="${reservation.getMovie_title()}"></td>
                     <td th:text="${reservation.getTheater_id()}"></td>
                     <td th:text="${reservation.getSeat_nr()}"></td>
+                    <form action="/filterReservation/deleteReservation" method="post">
+                        <input type="hidden" id="reservationId" name="reservationId" th:value="${reservation.getReservation_id()}">
+                        <td><input type="submit" style="background: red; color: white" value="Slet"></td>
+                    </form>
                 </tr>
                 </tbody>
             </table>
