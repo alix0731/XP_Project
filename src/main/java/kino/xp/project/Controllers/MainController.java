@@ -8,6 +8,7 @@ import kino.xp.project.Repository.ReservationRepository;
 import kino.xp.project.Service.MovieService;
 import kino.xp.project.Service.PlannerService;
 import kino.xp.project.Service.ReservationService;
+import kino.xp.project.Service.TheaterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,10 +30,13 @@ public class MainController {
     @Autowired
     ReservationRepository reservationRepository;
 
+    @Autowired
+    TheaterService theaterService;
+
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("movieList", movieService.listMovies());
-
+        model.addAttribute("theaterList", theaterService.listTheaters());
         HashMap<String, Integer> movieMap = new HashMap<>(); // this maps displays movieReservation by their fullness
         //todo lav metode :
 

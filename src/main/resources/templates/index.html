@@ -29,18 +29,28 @@
     <div class="container">
         <hr/>
         <div class="row justify-content-center">
-            <span class="services" style="padding: 30px" th:each="movie:${movieList}">
+                     <span class="services" style="padding: 30px" th:each="movie:${movieList}">
+                 <span class="services" style="padding: 30px" th:each="theater:${theaterList}">
 
 
 
                 <img width="200" height="300" th:src="${movie.poster}" alt="MoviePoster">
 
 
-                <p th:text="${movie.title}"></p>
-                <p th:text="'Varighed: ' + ${movie.duration} + ' minutter'"></p>
-                <p th:text="${movie.price_rank}"></p>
-                <p th:text="${movie.actors}"></p>
-                <p th:text="${movie.genre}"></p>
+                <p th:text="'Titel: ' + ${movie.title}"></p>
+                <p th:text="'Varighed: ' + ${movie.duration}"></p>
+                <p th:text="'Skuespillere: ' + ${movie.actors}"></p>
+                <p th:text="'Genre: ' + ${movie.genre}"></p>
+                <p th:text="'Antal Sæder: ' + ${theater.seats}"></p>
+                <p th:text="'Sal: ' + ${theater.theater_id}"></p>
+
+                <div>
+                    <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15}}" class="btn btn-success">15:00</a>
+                    <a  th:href="@{'/create-reservation' + ${movie.title} + '/' + ${18}}" class="btn btn-success">18:00</a>
+                    <a th:href="@{'/create-reservation'  + ${movie.title} + '/' + ${21}}" class="btn btn-success">21:00</a>
+                </div>
+            </span>
+            </span>
 
                 <div th:each="key : ${movieMap.keySet()}">
                        <!--<div th:if="${key.contains(movie.)}">
