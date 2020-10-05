@@ -2,7 +2,10 @@ package kino.xp.project.Repository;
 
 import kino.xp.project.Model.Reservation;
 import kino.xp.project.Service.ReservationService;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -11,12 +14,14 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ReservationRepositoryTest {
 
     @Autowired
     ReservationService rs;
 
     @Test
+    @Order(1)
     public void canCreateReservation(){
         //Arrange
         ArrayList<Reservation> list = new ArrayList<>();
@@ -36,6 +41,7 @@ class ReservationRepositoryTest {
     }
 
     @Test
+    @Order(2)
     public void canAddReservationToDatabase()
     {
         Reservation r = new Reservation(0, "Hans", "Jensen", 15151515,
@@ -43,5 +49,22 @@ class ReservationRepositoryTest {
                 "2020-10-15", 2, 24, true);
         assertTrue(rs.createReservation(r));
     }
+
+    @Test
+    @Order(3)
+    void canReadReservationByPhonenumber()
+    {
+        Reservation r = rs.getReservationByPhonenumber(98989898);
+        assertNotNull(r);
+    }
+
+    @Test
+    @Order(4)
+    void canDeleteReservationFromDatabase()
+    {
+        Reservation newR = rs.getReservationByPhonenumber(98989898);
+        assertTrue(rs.deleteReservation(newR.getReservation_id()));
+    }
+
 
 }
