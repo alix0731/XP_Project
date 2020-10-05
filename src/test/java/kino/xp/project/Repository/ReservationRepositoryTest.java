@@ -44,10 +44,4 @@ class ReservationRepositoryTest {
         assertTrue(rs.createReservation(r));
     }
 
-    @Test
-    void canDeleteReservationFromDatabase()
-    {
-        Reservation newR = rs.getReservationByPhonenumber(15151515);
-        assertTrue(rs.deleteReservation(newR.getReservation_id()));
-    }
 }
