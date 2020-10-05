@@ -52,7 +52,9 @@ public class ReservationRepository {
 
     public Reservation getReservationById(int id)
     {
-        String sql = 
+        String sql = "SELECT * FROM reservation WHERE reservation_id = ?";
+        RowMapper<Reservation> rm = new BeanPropertyRowMapper<>(Reservation.class);
+        return jdbcTemplate.queryForObject(sql, rm, id);
     }
 
     public List<Reservation> getListOfReservationsByMovieTitleAndPlaytimeAndDate(String title, String playtime, String date)
