@@ -27,7 +27,7 @@ public class ReservationRepository {
 
     public boolean deleteReservation(int id)
     {
-        String sql = "DELETE * FROM reservation WHERE reservation_id = ?";
+        String sql = "DELETE FROM reservation WHERE reservation_id = ?";
         return jdbcTemplate.update(sql, id) > 0;
     }
 
