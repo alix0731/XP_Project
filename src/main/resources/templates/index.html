@@ -37,13 +37,12 @@
                 <img width="200" height="300" th:src="${movie.poster}" alt="MoviePoster">
 
 
-                <p th:text="${movie.title}"></p>
-                <p th:text="${movie.duration}"></p>
-                <p th:text="${movie.price_rank}"></p>
-                <p th:text="${movie.actors}"></p>
-                <p th:text="${movie.genre}"></p>
-                <p th:text="${theater.seats}">Antal Pladser: </p>
-                <p th:text="${theater.theater_id}">Sal: </p>
+                <p th:text="'Titel: ' + ${movie.title}"></p>
+                <p th:text="'Varighed: ' + ${movie.duration}"></p>
+                <p th:text="'Skuespillere: ' + ${movie.actors}"></p>
+                <p th:text="'Genre: ' + ${movie.genre}"></p>
+                <p th:text="'Antal Sæder: ' + ${theater.seats}"></p>
+                <p th:text="'Sal: ' + ${theater.theater_id}"></p>
 
                 <div>
                     <a th:href="@{'/create-reservation' + ${movie.title} + '/' + ${15}}" class="btn btn-success">15:00</a>
