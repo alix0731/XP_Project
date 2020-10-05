@@ -45,7 +45,7 @@ public class ReservationRepository {
 
     public List<Reservation> getReservationByPhonenumber(int nr)
     {
-        String sql = "SELECT * FROM reservation WHERE phoneNumber = ? limit 1";
+        String sql = "SELECT * FROM reservation WHERE phoneNumber = ?";
         RowMapper<Reservation> rm = new BeanPropertyRowMapper<>(Reservation.class);
         return jdbcTemplate.query(sql, rm, nr);
     }
