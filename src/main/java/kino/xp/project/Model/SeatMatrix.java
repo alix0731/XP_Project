@@ -9,13 +9,16 @@ import java.util.List;
 
 /**
  * @Author Emil Norsker 3/10/20
+ *
+ *
+ *
  */
 
 
 public class SeatMatrix
 {
     int theater;
-    ArrayList<Reservation[]> matrix = new ArrayList<>();
+    public ArrayList<Reservation[]> matrix = new ArrayList<>();
 
     public SeatMatrix(int theater, List<Reservation> listOfOccupiedSeats)
     {
@@ -32,28 +35,31 @@ public class SeatMatrix
         int totalSeats = 0;
         int rows  = 0;
         if (theater == 1) {
-            totalSeats = 240;
-            rows =8;
+            totalSeats = 400;
+            rows =25;
         }
 
         else if (theater == 2)
         {
-            totalSeats = 180;
-            rows =10;
+            totalSeats = 240;
+            rows =20;
         }
 
 
         //create matrix
 
+        int count = 0;
+        System.out.println(rows);
+
         for (int i = 0; i < rows; i++) //this fills the matrix by making lists of reservation arrays, and appending them to the matrix object.
         {
-            int count = 0;
 
+            int rowMultiplier = count * totalSeats / rows;
             Reservation[] reservationArray = new Reservation[totalSeats/rows];
 
             for (int j = 1; j <= totalSeats/rows; j++)
             {
-                int seatNumber = j + (count * totalSeats / rows);
+                int seatNumber = j + rowMultiplier;
                 Reservation reservation = new Reservation();
 
                 for (Reservation reservationFromList: listOfOccupiedSeats) // determine if the reservation exist or not, if not assign the correct seat number to the reservation.
@@ -63,17 +69,20 @@ public class SeatMatrix
                     {
                         reservation = reservationFromList;
                         reservation.setIsOccupied(true);
+
                     }
                     else
                     {
                         reservation.setIsOccupied(false);
                         reservation.setSeat_nr(seatNumber);
+
                     }
                 }
 
                 reservationArray[j-1] = reservation;
             }
 
+            count++;
             matrix.add(reservationArray);
         }
     }
