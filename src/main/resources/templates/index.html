@@ -52,21 +52,21 @@
                      <div th:if="${key.contains(movie.getTitle())}">
 
                          <div th:if="${key.contains('15-00')}">
-                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success" style="background-color: #4CAF50">15:00</a> <!--no seats left, color = red -->
-                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success" style="background-color: #ff9900">15:00</a> <!-- <75% seats left, color yellow -->
-                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success" style="background-color: #4CAF50" >15:00</a> <!-- no seats taken, color = green -->
+                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success" style="background-color: #4CAF50">15:00</a> <!--no seats left, color = red -->
+                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success" style="background-color: #ff9900">15:00</a> <!-- <75% seats left, color yellow -->
+                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success" style="background-color: #4CAF50" >15:00</a> <!-- no seats taken, color = green -->
 
                          </div>
                          <div th:if="${key.contains('18-00')}">
-                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success" style="background-color: #f44336">18:00</a> <!--no seats left, color = red -->
-                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success" style="background-color: #ff9900">18:00</a> <!-- <75% seats left, color yellow -->
-                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success" style="background-color: #4CAF50">18:00</a> <!-- no seats taken, color = green -->
+                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success" style="background-color: #f44336">18:00</a> <!--no seats left, color = red -->
+                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success" style="background-color: #ff9900">18:00</a> <!-- <75% seats left, color yellow -->
+                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success" style="background-color: #4CAF50">18:00</a> <!-- no seats taken, color = green -->
 
                          </div>
                          <div th:if="${key.contains('21-00')}">
-                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${15-00}}" class="btn btn-success" style="background-color: #f44336" >21:00</a> <!--no seats left, color = red -->
-                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${18-00}}" class="btn btn-success" style="background-color: #ff9900" >21:00</a> <!-- <75% seats left, color yellow -->
-                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success" style="background-color: #4CAF50" >21:00</a> <!-- no seats taken, color = green -->
+                             <a th:if="${movieMap.get(key)==0}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success" style="background-color: #f44336" >21:00</a> <!--no seats left, color = red -->
+                             <a th:if="${movieMap.get(key)==1}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success" style="background-color: #ff9900" >21:00</a> <!-- <75% seats left, color yellow -->
+                             <a th:if="${movieMap.get(key)==2}" th:href="@{'/create-reservation' + '/' + ${movie.getTitle()} + '/' + ${21-00}}" class="btn btn-success" style="background-color: #4CAF50" >21:00</a> <!-- no seats taken, color = green -->
                          </div>
                      </div>
 
