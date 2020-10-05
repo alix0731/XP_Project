@@ -37,9 +37,9 @@ public class ReservationController {
     }
 
 
-    @GetMapping("/create-reservation-with-seats/{title}/{playtime}/{date}/{theater}/") //[3]
+    @GetMapping("/create-reservations-with-seats/{title}/{playtime}/{date}/{theater}/") //[3]
     public String createReservationWithSeats(@PathVariable("title") String title, @PathVariable("playtime") String playtime,
-                                             @PathVariable("date") String date, @PathVariable("theater") String theater,@RequestParam("seats") String seats, Model model){
+                                             @PathVariable("date") String date, @PathVariable("theater") int theater,@RequestParam("seats") String seats, Model model){
 
         System.out.println("seats are :" +seats);
         model.addAttribute("title", title);

@@ -30,7 +30,7 @@ public class ReservationService {
 
     public List<Reservation> getReservationByPhonenumber(int nr)
     {
-        return reservationRepository.getReservationByPhonenumber(nr);
+        return (List<Reservation>) reservationRepository.getReservationByPhonenumber(nr);
     }
 
     public Reservation getReservationById(int id)
