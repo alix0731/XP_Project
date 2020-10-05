@@ -10,12 +10,17 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * @Author Daniel, Emil Andersen, Norsker
+ * @Parameter kaldes fra Service-lag, tager kontakt til MySQL database
+ * @Output Reservation-objekter og antal af reserverede seats
+ **/
+
 @Repository
 public class ReservationRepository {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
-
 
     public boolean createReservation(Reservation reservation){
         String sql = "Insert INTO reservation(firstName, lastName, phonenumber, email, movie_title, movie_playtime, movie_date, reservation_date, theater_id, seat_nr, paid) Values(?,?,?,?,?,?,?,?,?,?,?)";
@@ -69,15 +74,13 @@ public class ReservationRepository {
 
         Integer numberOfSeats = jdbcTemplate.queryForObject(sql, Integer.class, theaterId);
         Integer numberOfRows = jdbcTemplate.queryForObject(sql2, Integer.class, theaterId);
-        int totalSeats = (numberOfSeats) * (numberOfRows); //16 * 25
-        int percentageReserved = (getNumberOfReservations(title, playtime, date)*100)/totalSeats; //5 / (16 * 25)
+        int totalSeats = numberOfSeats * numberOfRows;
+        int percentageReserved = (getNumberOfReservations(title, playtime, date) * 100) / totalSeats;
 
-        System.out.println(getNumberOfReservations(title, playtime, date));
-        System.out.println("rows " +numberOfRows);
-        System.out.println("seats " +numberOfSeats);
-        System.out.println("seats reserved = " + percentageReserved);
-
-
+//        System.out.println(getNumberOfReservations(title, playtime, date));
+//        System.out.println("rows " +numberOfRows);
+//        System.out.println("seats " +numberOfSeats);
+//        System.out.println("seats reserved = " + percentageReserved);
 
         if(percentageReserved == 100) { //100% reserved
             return 0;
@@ -86,13 +89,5 @@ public class ReservationRepository {
         } else { //less than 75% reserved
             return 2;
         }
-
-
-
-
-    }
-
-    public static int absoluteValue(int i) {
-        return (i < 0) ? -i : i;
     }
 }

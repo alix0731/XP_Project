@@ -9,6 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * @Author Daniel, Emil Andersen
+ * @Parameter kaldes fra Service lag, tager kontakt til MySQL database
+ * @Output list af Planner-objekter (planlagte film til visning)
+ **/
+
 @Repository
 public class PlannerRepository {
     @Autowired

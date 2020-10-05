@@ -3,6 +3,12 @@ package kino.xp.project.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * @Author Daniel, Emil Andersen
+ * @Parameter input fra html form
+ * @Output Planner objekt
+ **/
+
 @Entity
 public class Planner {
     @Id

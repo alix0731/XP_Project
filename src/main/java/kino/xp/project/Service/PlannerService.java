@@ -7,6 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @Author Daniel, Emil Andersen
+ * @Parameter service lag mellem controller og repository
+ * @Output metoder fra repository
+ **/
+
 @Service
 public class PlannerService {
     @Autowired
