@@ -16,7 +16,7 @@ public class ReservationRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-
+    //tilføj reservation til database
     public boolean createReservation(Reservation reservation){
         String sql = "Insert INTO reservation(firstName, lastName, phonenumber, email, movie_title, movie_playtime, movie_date, reservation_date, theater_id, seat_nr, paid) Values(?,?,?,?,?,?,?,?,?,?,?)";
         return (jdbcTemplate.update(sql, reservation.getFirstName(), reservation.getLastName(),
@@ -25,6 +25,7 @@ public class ReservationRepository {
                 reservation.getTheater_id(), reservation.getSeat_nr(), reservation.isPaid()) > 0);
     }
 
+    //fjern reservation til database
     public boolean deleteReservation(int id)
     {
         String sql = "DELETE FROM reservation WHERE reservation_id = ?";
@@ -43,6 +44,8 @@ public class ReservationRepository {
 //                            r.getReservation_id());
 //    }
 
+    //return list med reservationer der har specifikt tlf nr
+    //eftersom samme tlf nr godt kan have flere reservationer
     public List<Reservation> getReservationByPhonenumber(int nr)
     {
         String sql = "SELECT * FROM reservation WHERE phoneNumber = ?";
@@ -50,6 +53,7 @@ public class ReservationRepository {
         return jdbcTemplate.query(sql, rm, nr);
     }
 
+    //få enkelt reservations objekt ud fra id
     public Reservation getReservationById(int id)
     {
         String sql = "SELECT * FROM reservation WHERE reservation_id = ?";
@@ -57,6 +61,7 @@ public class ReservationRepository {
         return jdbcTemplate.queryForObject(sql, rm, id);
     }
 
+    //få liste af reservationer som har tilknyttet en specifik film, starttid, dato
     public List<Reservation> getListOfReservationsByMovieTitleAndPlaytimeAndDate(String title, String playtime, String date)
     {
         String sql = "SELECT * FROM reservation WHERE movie_title = ? AND movie_playtime = ? AND movie_date = ?";
@@ -64,11 +69,14 @@ public class ReservationRepository {
         return jdbcTemplate.query(sql, rm, title, playtime, date);
     }
 
+    //få antal af reservationer for en specifik film, starttid, dato
     public int getNumberOfReservations(String title, String playtime, String date)
     {
         return getListOfReservationsByMovieTitleAndPlaytimeAndDate(title, playtime, date).size();
     }
 
+    //udregn hvor mange sæder der er reserverede til specifik forestilling
+    //bruges til at udregne hvilken farve knappen til reservation skal have
     public int calculateSeatsReserved(int theaterId, String title, String playtime, String date)
     {
         String sql = "SELECT seats FROM theaters WHERE theater_id = ?";
