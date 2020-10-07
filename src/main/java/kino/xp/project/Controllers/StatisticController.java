@@ -1,6 +1,8 @@
-package kino.xp.project.controllers;
+package kino.xp.project.Controllers;
 
+import kino.xp.project.Service.MovieService;
 import kino.xp.project.repositories.RandomMethod;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +20,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class StatisticController {
 
+    @Autowired
+    MovieService movieService = new MovieService();
+
     @GetMapping("/statistic")
-    public String getStat()
+    public String getStat(Model model)
     {
+        model.addAttribute("movieList", movieService.listMovies());
+        RandomMethod rm = new RandomMethod(movieService.listMovies().size());
+        model.addAttribute("randomNumber", rm.getArrayList());
         return "statistic";
     }
 

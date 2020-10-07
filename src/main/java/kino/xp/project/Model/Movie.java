@@ -17,6 +17,7 @@ public class Movie
     private String title;
     private int duration;
     private int price_rank;
+    private int price;
     private String genre;
     private String actors;
     private String poster;
@@ -34,6 +35,11 @@ public class Movie
         this.genre = genre;
         this.actors = actors;
         this.poster = poster;
+        switch (price_rank){
+            case 1 : this.price = 65;
+            case 2 : this.price = 75;
+            case 3 : this.price = 95;
+        }
     }
 
 //    public Movie(String title, int duration, int priceRank, String genre, String actors, String poster)
@@ -45,6 +51,15 @@ public class Movie
 //        this.actors = actors;
 //        this.poster = poster;
 //    }
+
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     public int getMovie_id() {
         return movie_id;

@@ -1,6 +1,15 @@
-package kino.xp.project.Model;
+/**
+ * @Edit Emil Norsker 3/10/20 : added occupied flag,
+ */
 
+
+
+
+package kino.xp.project.Model;
+import java.util.ArrayList;
+import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -19,6 +28,7 @@ public class Reservation {
     private int theater_id;
     private int seat_nr;
     private boolean paid;
+    private boolean isOccupied;
 
     public Reservation() {
     }
@@ -36,6 +46,7 @@ public class Reservation {
         this.theater_id = theater_id;
         this.seat_nr = seat_nr;
         this.paid = paid;
+        this.isOccupied = false;
     }
 
     public int getReservation_id() {
@@ -134,6 +145,12 @@ public class Reservation {
         this.paid = paid;
     }
 
+    public void fillmatrix()
+    {
+
+    }
+
+
     @Override
     public String toString() {
         return "Reservation{" +
@@ -151,6 +168,17 @@ public class Reservation {
                 ", paid=" + paid +
                 '}';
     }
+
+    public boolean isOccupied()
+    {
+       return isOccupied;
+    }
+
+    public void setIsOccupied(boolean value)
+    {
+        isOccupied = value;
+    }
+
 }
 
 

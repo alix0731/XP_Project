@@ -1,22 +1,31 @@
 package kino.xp.project.Repository;
 
+import kino.xp.project.Model.Movie;
 import kino.xp.project.Model.Reservation;
 import kino.xp.project.Service.ReservationService;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ReservationRepositoryTest {
+
+    int testphone = 98989898;
 
     @Autowired
     ReservationService rs;
 
     @Test
+    @Order(1)
     public void canCreateReservation(){
         //Arrange
         ArrayList<Reservation> list = new ArrayList<>();
@@ -36,18 +45,41 @@ class ReservationRepositoryTest {
     }
 
     @Test
+    @Order(2)
     public void canAddReservationToDatabase()
     {
-        Reservation r = new Reservation(0, "Hans", "Jensen", 15151515,
+        Reservation r = new Reservation(0, "Hans", "Jensen", testphone,
                 "hansJ@mail.dk", "Tenet", "19:30", "2020-11-30",
                 "2020-10-15", 2, 24, true);
         assertTrue(rs.createReservation(r));
     }
 
     @Test
+    @Order(3)
+    void canReadReservationByPhonenumber()
+    {
+        List<Reservation> list = rs.getReservationByPhonenumber(testphone);
+        assertNotNull(list);
+    }
+
+    @Test
+    @Order(4)
+    void canReadReservationById()
+    {
+        List<Reservation> list = rs.getReservationByPhonenumber(testphone);
+        int id = list.get(0).getReservation_id();
+        assertNotNull(rs.getReservationById(id));
+    }
+
+    @Test
+    @Order(5)
     void canDeleteReservationFromDatabase()
     {
-        Reservation newR = rs.getReservationByPhonenumber(15151515);
-        assertTrue(rs.deleteReservation(newR.getReservation_id()));
+        List<Reservation> list = rs.getReservationByPhonenumber(testphone);
+        int sizeBeforeDeletion = list.size();
+        assertTrue(rs.deleteReservation(list.get(0).getReservation_id()));
+        int sizeAfterDeletion = rs.getReservationByPhonenumber(testphone).size();
+        assertTrue(sizeBeforeDeletion > sizeAfterDeletion);
     }
+
 }
