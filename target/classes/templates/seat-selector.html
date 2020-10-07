@@ -61,10 +61,20 @@
 
                 <else th:if="${!reservation.isOccupied()}">
                <!--  <else th:unless="${reservation.isOccupied()}"> -->
+                    <if th:if="${rowStat.last}">
+                        <!-- luxery seats -->
+                        <div class="button-blue"> <!-- red box -->
+                            <input type="button" th:id="${'95|'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
+
+                        </div>
+
+                    </if>
+                    <else th:unless="${rowStat.last}">
                     <div class="button-green"> <!-- red box -->
-                        <input type="button" th:id="${reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
+                        <input type="button" th:id="${'130|'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
 
                     </div>
+                    </else>
                 </else>
             </td>
         </tr>
@@ -87,6 +97,10 @@
     .button-green input[type=button]
     {
         background-color: #a6a6a6;
+    }
+    .button-blue input[type=button]
+    {
+        background-color: #1a42e2;
     }
 </style>
 
