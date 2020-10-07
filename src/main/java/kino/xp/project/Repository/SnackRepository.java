@@ -30,4 +30,13 @@ public class SnackRepository {
     }
 
 
+    public boolean deleteSnack(int snackId)
+    {
+        String sql = "DELETE FROM snacks WHERE snackId = ?";
+        return template.update(sql, snackId) > 0;
+    }
+
+
+
+
 }
