@@ -25,7 +25,7 @@ public class SnackRepository {
 
     public boolean addSnack(Snack snack){
         //tilføjer en snack til databasen.
-        String sql = "INSERT INTO snacks VALUES (?,?,?)";
+        String sql = "INSERT INTO snacks (product_name,product_price,product_img) VALUES (?,?,?)";
         return (template.update(sql,snack.getName(),snack.getPrice(),snack.getImg())> 0);
     }
 

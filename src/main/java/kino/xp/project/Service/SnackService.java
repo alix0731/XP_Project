@@ -17,6 +17,8 @@ public class SnackService {
         return sp.getSnacks();
     }
 
-
+    public boolean addSnack(Snack snack) {
+        return sp.addSnack(snack);
+    }
 
 }
