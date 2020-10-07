@@ -31,4 +31,10 @@ public class SnackController {
         return "redirect:/";
     }
 
+
+    @GetMapping("/AllSnacks")
+    public String allSnacks(){
+        return "AllSnacks";
+    }
+
 }
