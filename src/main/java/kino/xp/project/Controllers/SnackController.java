@@ -4,11 +4,13 @@ import kino.xp.project.Model.Snack;
 import kino.xp.project.Service.SnackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -33,8 +35,19 @@ public class SnackController {
 
 
     @GetMapping("/AllSnacks")
-    public String allSnacks(){
+    public String allSnacks(Model model){
+
+
+
+        model.addAttribute("list", snackService.getAll());
+
         return "AllSnacks";
+    }
+
+    @PostMapping("/deleteSnack")
+    public String deleteSnack(@RequestParam int id){
+        snackService.deleteSnack(id);
+        return "redirect:/AllSnacks";
     }
 
 }

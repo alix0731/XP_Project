@@ -37,6 +37,7 @@ table{
     background-color: gray;
     border-collapse: collapse;
     width: 85%;
+    color: #0d0d0d;
 }
 th{
     background-color: lightgray;
