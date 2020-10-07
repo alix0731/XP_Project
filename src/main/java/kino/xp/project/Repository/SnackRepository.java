@@ -29,4 +29,5 @@ public class SnackRepository {
         return (template.update(sql,snack.getName(),snack.getPrice(),snack.getImg())> 0);
     }
 
+
 }
