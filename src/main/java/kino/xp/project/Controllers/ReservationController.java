@@ -47,8 +47,6 @@ public class ReservationController {
         model.addAttribute("theater", theater);
         model.addAttribute("seats", seats);
 
-        System.out.println("seats are :" +seats);
-
         return "reservationPage";
     }
 
@@ -75,7 +73,6 @@ public class ReservationController {
     @GetMapping("/create-reservations/with-seats")
     public String addReservations(@RequestParam("seats") String seats,Model model)
     {
-        //System.out.println("seats are = " +seats);
 
         //todo split seats, crete a reervation for each seat
 
@@ -89,14 +86,7 @@ public class ReservationController {
     @PostMapping("/reservation-created")
     public String reservationCreated(@ModelAttribute Reservation reservation, @RequestParam("seats") String seats){
 
-
-
         String[] splitSeats = seats.split(" , ");
-        System.out.println("seat string "+seats+ "  total length  "+splitSeats.length);
-
-
-        System.out.println(splitSeats.length);
-
         Reservation rsv = new Reservation();
         rsv.setReservation_id(reservation.getReservation_id());
 
@@ -107,10 +97,6 @@ public class ReservationController {
 
             if (!seat.isEmpty()) {
 
-                System.out.println("id =  " + rsv.getReservation_id());
-
-
-
                 rsv.setFirstName(reservation.getFirstName());
                 rsv.setLastName(reservation.getLastName());
                 rsv.setEmail(reservation.getEmail());
@@ -120,17 +106,9 @@ public class ReservationController {
                 rsv.setTheater_id(reservation.getTheater_id());
                 rsv.setMovie_title(reservation.getMovie_title());
 
-
-
-
                 rsv.setSeat_nr(Integer.parseInt(seat));
-
-
                 reservationService.createReservation(rsv);
-
                 rsv.setReservation_id(rsv.getReservation_id()+1);
-
-
             }
         }
 

@@ -56,33 +56,36 @@ public class SeatMatrix
             int rowMultiplier = count * totalSeats / rows;
             Reservation[] reservationArray = new Reservation[totalSeats/rows];
 
+            System.out.println("row = "+i);
+
             for (int j = 1; j <= totalSeats/rows; j++)
             {
+
+
+                System.out.println("seat index "+ j);
+
                 int seatNumber = j + rowMultiplier;
                 Reservation reservation = new Reservation();
+
 
 
                 reservation.setIsOccupied(false);
                 reservation.setSeat_nr(seatNumber);
 
-
-
                 for (Reservation reservationFromList: listOfOccupiedSeats) // determine if the reservation exist or not, if not assign the correct seat number to the reservation.
                 {
+                    System.out.println("id - " +reservation.getReservation_id() + "  seat = "+reservation.getSeat_nr());
 
                     if (reservationFromList.getSeat_nr() == seatNumber)
                     {
+                        System.out.println("this instance exit");
                         reservation = reservationFromList;
                         reservation.setIsOccupied(true);
-
-                    }
-                    else
-                    {
-                        reservation.setIsOccupied(false);
-                        reservation.setSeat_nr(seatNumber);
+                        continue;
 
                     }
                 }
+
 
                 reservationArray[j-1] = reservation;
             }
