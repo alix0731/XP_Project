@@ -48,7 +48,7 @@ public class SnackRepository {
     public boolean editSnack(Snack snack){
         String sql = "update snacks set product_name = ?,product_price = ?, product_img = ? where product_id = ?";
 
-        return (template.update(sql, snack.getName(), snack.getPrice(), snack.getImg(),snack.getSnackId()) > 0);
+        return (template.update(sql, snack.getProduct_name(), snack.getProduct_price(), snack.getProduct_price(),snack.getProduct_price()) > 0);
 
     }
 
