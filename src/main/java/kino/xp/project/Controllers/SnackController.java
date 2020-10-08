@@ -60,4 +60,21 @@ public class SnackController {
         return "snack/snackPrice";
     }
 
+
+    @GetMapping("/AllSnacks")
+    public String allSnacks(Model model){
+
+
+
+        model.addAttribute("list", snackService.getAll());
+
+        return "AllSnacks";
+    }
+
+    @PostMapping("/deleteSnack")
+    public String deleteSnack(@RequestParam int id){
+        snackService.deleteSnack(id);
+        return "redirect:/AllSnacks";
+    }
+
 }

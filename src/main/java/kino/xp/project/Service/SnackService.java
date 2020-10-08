@@ -21,4 +21,16 @@ public class SnackService {
         return sp.addSnack(snack);
     }
 
+    public boolean deleteSnack(int id){
+        return sp.deleteSnack(id);
+    }
+
+    public boolean editSnack(Snack snack){
+        return sp.editSnack(snack);
+    }
+
+    public List<Snack> getAll(){
+        return sp.getAllSnacks();
+    }
+
 }
