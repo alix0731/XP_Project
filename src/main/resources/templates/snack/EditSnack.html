@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+
     <meta charset="UTF-8">
-    <title>addSnack</title>
+    <title>KinoXp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <link th:href="@{style.css}" rel="stylesheet"/>
     <link rel="stylesheet" href="MyCSS.css">
+
+    <!--<link th:href="@{homeStyle.css}" rel="stylesheet"/>-->
+
     <style>
-        body{
-            background-color: black;
-        }
-
-
-        .services {
-            padding: 30px;
-        }
-
-
-        #logo{
-            padding: 10px;
-        }
-
         div{
             color: white;
         }
     </style>
-
 </head>
-<body>
+
+<body style="background-color: black">
+
+
 <header th:replace="fragments/header :: header">
 </header>
 
 
+<div class="justify-content-center">
+    <h1>Edit Product</h1>
+</div>
 
-    <div class="container">
-        <div id="createForm">
-            <form action="/addSnack" method="post">
-                Navn: <input type="text" name="name"                required oninvalid="this.setCustomValidity('Indtast venligst et navn')" oninput=this.setCustomValidity('')><br>
-                Pris: <input type="number" name="price"             required oninvalid="this.setCustomValidity('Indtast venligst prisen')" oninput=this.setCustomValidity('')><br>
-                Link af billede: <input type="text" name="img"      required oninvalid="this.setCustomValidity('Indtast venligst et link')" oninput=this.setCustomValidity('')><br>
-                <input type="submit" value="Gem" id="saveButton">
+<div class="row justify-content-center">
 
-            </form>
+
+
+
+    <form action="/updateSnack" method="post">
+
+        <div class="form-group">
+            <input type="hidden" name="product_id"  th:value="${id}" class="form-control" required><br/>
+        </div>
+        <div class="form-group">
+            <label for="First Name">Name</label><br/>
+            <input type="text" name="product_name" id="First Name" th:value="${name}" class="form-control" required><br/>
+        </div>
+
+        <div class="form-group">
+            <label for="Last Name">Price</label><br/>
+            <input type="text" name="product_price" id="Last Name" th:value="${price}" class="form-control" required><br/>
+        </div>
+
+        <div class="form-group">
+            <label for="img">Img</label><br/>
+            <input type="text" name="product_img" id="img" th:value="${img}" class="form-control" required><br/>
         </div>
 
 
-    </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" name="submit">Update</button>
+        </div>
+    </form>
 
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -64,6 +75,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 
 </body>
