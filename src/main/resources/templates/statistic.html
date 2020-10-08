@@ -84,14 +84,19 @@
         <div class="row justify-content-center">
             <span class="services" style="padding: 30px" th:each="movie:${movieList}">
 
+
+
                 <img width="200" height="300" th:src="${movie.poster}" alt="MoviePoster">
 
 
                 <p th:text="${movie.title}"></p>
-                <p th:text="'Solgte billetter: ' + ${randomNumber.get(movieList.indexOf(movie))}"></p>
-                <p th:text="'Pris: ' + ${movie.price_rank} + ' kr.'"></p>
-            </span>
 
+
+            </span>
+            <p th:text="'Billetter solgt: ' + ${film1.get(0)}"></p>
+            <p th:text="'Billetter solgt: ' + ${film2.get(0)}"></p>
+            <p th:text="'Billetter solgt: ' + ${film3.get(0)}"></p>
+            <p th:text="'Billetter solgt: ' + ${film4.get(0)}"></p>
         </div>
     </div>
 

@@ -2,8 +2,10 @@ package kino.xp.project.Controllers;
 
 import kino.xp.project.Model.Schedule;
 import kino.xp.project.Model.Worker;
+import kino.xp.project.Service.MovieService;
 import kino.xp.project.repositories.RandomMethod;
 import kino.xp.project.repositories.ScheduleRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -20,10 +22,21 @@ import org.springframework.web.bind.annotation.*;
 public class StatisticController {
 
     ScheduleRepository sr = new ScheduleRepository();
+    @Autowired
+    MovieService movieService;
 
     @GetMapping("/statistic")
-    public String getStat()
+    public String getStat(Model model)
     {
+        RandomMethod rm1film1 = new RandomMethod(1);
+        RandomMethod rm1film2 = new RandomMethod(1);
+        RandomMethod rm1film3 = new RandomMethod(1);
+        RandomMethod rm1film4 = new RandomMethod(1);
+        model.addAttribute("film1", rm1film1.getArrayList());
+        model.addAttribute("film2", rm1film2.getArrayList());
+        model.addAttribute("film3", rm1film3.getArrayList());
+        model.addAttribute("film4", rm1film4.getArrayList());
+        model.addAttribute("movieList", movieService.listMovies());
         return "statistic";
     }
 
