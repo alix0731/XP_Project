@@ -44,12 +44,12 @@
                 </tr>
                 <tr th:each="product:${list}">
 
-                    <td th:text="${product.snackId}"></td>
-                    <td th:text="${product.name}"></td>
-                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.product_id}"></td>
+                    <td th:text="${product.product_name}"></td>
+                    <td th:text="${product.product_price}"></td>
                     <td>
                         <form action="/deleteSnack" method="post">
-                            <input type="hidden" name="id" th:value="${product.snackId}">
+                            <input type="hidden" name="id" th:value="${product.product_id}">
                             <button class="btn btn-danger">Delete</button>
                         </form>
                     </td>
