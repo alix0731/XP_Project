@@ -33,4 +33,8 @@ public class SnackService {
         return sp.getAllSnacks();
     }
 
+    public Snack getById(int id){
+        return sp.getById(id);
+    }
+
 }

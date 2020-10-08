@@ -9,9 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +46,7 @@ public class SnackRepository {
     public boolean editSnack(Snack snack){
         String sql = "update snacks set product_name = ?,product_price = ?, product_img = ? where product_id = ?";
 
-        return (template.update(sql, snack.getProduct_name(), snack.getProduct_price(), snack.getProduct_price(),snack.getProduct_price()) > 0);
+        return (template.update(sql, snack.getProduct_name(), snack.getProduct_price(), snack.getProduct_price(),snack.getProduct_id()) > 0);
 
     }
 
@@ -70,6 +68,28 @@ public class SnackRepository {
             e.printStackTrace();
         }
         return productList;
+    }
+
+    public Snack getById(int id){
+
+        Snack snack = new Snack();
+        try {
+            PreparedStatement pre = conn.prepareStatement("SELECT * from snacks where product_id = ?");
+            pre.setInt(1, id);
+            ResultSet resultSet = pre.executeQuery();
+
+            while (resultSet.next()){
+                snack.setProduct_id(resultSet.getInt(1));
+                snack.setProduct_name(resultSet.getString(2));
+                snack.setProduct_price(resultSet.getDouble(3));
+                snack.setProduct_img(resultSet.getString(4));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return snack;
     }
 
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -75,6 +76,31 @@ public class SnackController {
     public String deleteSnack(@RequestParam int id){
         snackService.deleteSnack(id);
         return "redirect:/AllSnacks";
+    }
+
+
+    @GetMapping("/editSnack{id}")
+    public String edit(@PathVariable("id") int id, Model model){
+
+        System.out.println(id);
+        Snack snack = snackService.getById(id);
+        System.out.println(snack.getProduct_name());
+
+        model.addAttribute("id", snack.getProduct_id());
+        model.addAttribute("name", snack.getProduct_name());
+        model.addAttribute("price", snack.getProduct_price());
+        model.addAttribute("img", snack.getProduct_img());
+
+
+        return "snack/EditSnack";
+    }
+
+    @PostMapping("/updateSnack")
+    public String update(Snack snack){
+
+        snackService.editSnack(snack);
+
+        return "redirect:/editSnack";
     }
 
 }

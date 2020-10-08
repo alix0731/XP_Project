@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>snackMain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="MyCSS.css">
+    <style>
+
+
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<header th:replace="fragments/header :: header">
+</header>
+
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <form action="/selectedSnacks" method="post" style="width: 800px; display: inline-block; padding: 45px" >
+            <span class="column services" style="padding: 45px; display: inline-block; width: 220px" th:each="snack:${snackList} ">
+
+
+                    <p style="color: white" th:text="${snack.product_name}"></p>
+                    <img width="200" height="300" th:src="${snack.product_img}" alt="snackImage">
+
+                    <p style="color: white" th:text="${snack.product_price}"></p>
+
+
+                    <input type="number" th:name="${snack.product_id}">
+
+            </span>
+            <button type="submit" name="submit">Vælg</button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+
+</html>
