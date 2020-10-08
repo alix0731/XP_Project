@@ -68,7 +68,7 @@ public class SnackController {
 
         model.addAttribute("list", snackService.getAll());
 
-        return "AllSnacks";
+        return "snack/AllSnacks";
     }
 
     @PostMapping("/deleteSnack")
