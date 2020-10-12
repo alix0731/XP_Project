@@ -59,7 +59,7 @@ public class ReservationController {
             }
             else
             {
-                String[] sArr = s.split("|");
+                String[] sArr = s.split("-");
                 sum += Integer.parseInt(sArr[0]);
                 System.out.println("s1 = "+sArr[0] + " , s2 = "+sArr[1]);
                 System.out.println("sum = "+ sum);
@@ -67,7 +67,7 @@ public class ReservationController {
             }
         }
 
-        model.addAttribute("seats", seats);
+        model.addAttribute("seats", newSeats);
         model.addAttribute("totalPrice", sum);
 
         return "reservationPage";
