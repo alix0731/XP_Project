@@ -1,0 +1,112 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <link rel="stylesheet" th:href="@{../static/MyCSS.css}">
+</head>
+
+<script>
+
+    let inputs = ""
+
+
+    function submitBtn()
+    {
+        document.getElementById("seats").setAttribute("value", inputs.toString() );
+        console.log('value = '+document.getElementById("seats").value)
+        document.theForm.submit();
+    }
+
+    function addSeat(seat)
+    {
+        inputs += " , " +seat ;
+        console.log(' seat '+seat);
+        console.log()
+
+        //document.getElementById("my-form").appendChild(seatElement);               // Append <button> to <body>
+
+    }
+
+    function clicked(id)
+    {
+        var element = document.getElementById(id);
+        if (element.style.background == "green")
+        {
+            //remove from seats
+            element.style.background = "#a6a6a6";
+        }
+        else
+        {
+            addSeat(id)
+            console.log(id)
+            //add to selected seats
+            element.style.background = "green";
+        }
+    }
+
+</script>
+
+
+</div>
+    <table> <!-- this snippet will generate seats based on a matrix with row and columns-->
+        <tbody>
+        <tr th:each="row : ${matrix.getMatrix()}">
+            <td th:each="reservation : ${row}">
+
+                <if th:if="${reservation.isOccupied()}">
+                    <div class="button-red"> <!-- red box -->
+                        <input type="button" th:id="button-red-+${reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" />
+                        <!-- <label th:for="button-red-+${reservation.getSeat_nr()}" ></label> -->
+                    </div>
+                </if>
+
+                <else th:if="${!reservation.isOccupied()}">
+               <!--  <else th:unless="${reservation.isOccupied()}"> -->
+                    <if th:if="${rowStat.last}">
+                        <!-- luxery seats -->
+                        <div class="button-blue"> <!-- red box -->
+                            <input type="button" th:id="${'95|'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
+
+                        </div>
+
+                    </if>
+                    <else th:unless="${rowStat.last}">
+                    <div class="button-green"> <!-- red box -->
+                        <input type="button" th:id="${'130|'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
+
+                    </div>
+                    </else>
+                </else>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form id="my-form" name="theForm" th:action="'/create-reservations-with-seats/'+${title} + '/' + ${playtime}+ '/' + ${date} + '/' + ${theater}+ '/'">
+        <input type="text" id="seats" value="" name="seats" form="my-form" style="display: none">
+        <input type="button" onclick="submitBtn()" form="my-form">
+    </form>
+
+</div>
+
+
+<style>
+    .button-red input[type=button]
+    {
+        background-color: #8B0000;
+    }
+    .button-green input[type=button]
+    {
+        background-color: #a6a6a6;
+    }
+    .button-blue input[type=button]
+    {
+        background-color: #1a42e2;
+    }
+</style>
+
+</html>
+
+
+
+
+

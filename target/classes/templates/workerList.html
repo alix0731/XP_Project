@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Medarbejdere</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link th:href="@{style.css}" rel="stylesheet"/>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .services {
+            padding: 30px;
+        }
+
+
+        #logo{
+            padding: 10px;
+        }
+
+        div{
+            color: white;
+        }
+
+        tr, td, th{
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+
+            <div id="logo">
+                <img th:src="kino.png" alt="KinoLogo">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0d0d0d">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li>
+                        <a style="background: red" class="nav-link" href="/">Log ud<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active" style="padding-left: 1vw">
+                        <a style="background: skyblue" class="nav-link" href="/calendar">Kalender<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active" style="padding-left: 1vw">
+                        <a style="background: skyblue" class="nav-link" href="/schedule/1">Vagtplan<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active" style="padding-left: 1vw">
+                        <a style="background: skyblue" class="nav-link" href="/statistic">Statistik<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+</header>
+
+<main>
+    <center><table border="1" style="border: white">
+        <thead>
+        <th style="width: 11vw">
+            ID
+        </th>
+        <th style="width: 11vw">
+            Navn
+        </th>
+        <th border="0" style="width: 11vw"></th>
+        </thead>
+        <tbody>
+        <tr th:each="worker : ${workers}">
+            <td th:text="${worker.getId()}"></td>
+            <td th:text="${worker.getName()}"></td>
+            <td>
+                <form method="post" action="/workerList/remove">
+                    <input type="hidden" name="id" th:value="${worker.getId()}">
+                    <input type="submit" value="Fjern medarbejder" style="background: red">
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table></center>
+    <br>
+    <center><a href="/workerList/create"><button style="background: lawngreen">Opret ny medarbejder</button></a></center>
+</main>
+
+</body>
+</html>

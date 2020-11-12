@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: kino.xp.project.Repository.ReservationRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.912 s - in kino.xp.project.Repository.ReservationRepositoryTest

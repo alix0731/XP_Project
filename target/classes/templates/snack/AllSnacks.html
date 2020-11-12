@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>KinoXp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="MyCSS.css">
+
+    <!--<link th:href="@{homeStyle.css}" rel="stylesheet"/>-->
+
+    <style>
+        div{
+            color: white;
+        }
+    </style>
+
+</head>
+<body style="background-color: black">
+
+<header th:replace="fragments/header :: header">
+</header>
+
+<main>
+    <div class="container">
+
+        <br>
+
+        <div class="row justify-content-center">
+
+            <br/>
+            <h1>List of Products</h1>
+
+            <table>
+                <tr>
+                    <th>Product_id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+
+
+                </tr>
+                <tr th:each="product:${list}">
+
+                    <td th:text="${product.product_id}"></td>
+                    <td th:text="${product.product_name}"></td>
+                    <td th:text="${product.product_price}"></td>
+                    <td>
+                        <form action="/deleteSnack" method="post">
+                            <input type="hidden" name="id" th:value="${product.product_id}">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+
+                    <td><a th:href="@{'/editSnack' + ${product.product_id}}" class="btn btn-success">Edit</a></td>
+                    <!--                <td><a th:href="@{'/editcustomer' + ${customer.customer_id}}" class="btn btn-info">Edit</a></td>-->
+                    <!--                <td><a href="${pageContext.request.contextPath }" th:href=" @{'/deletecustomer' + ${customer.customer_id}}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this customer?')">Delete</a></td>-->
+
+
+                </tr>
+            </table>
+            <a href="/addSnack" class="btn btn-primary">Tilføj en ny type snack</a>
+        </div>
+
+
+
+
+    </div>
+
+</main>
+
+
+<footer>
+    <div th:replace="fragments/footer"/>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</body>
+</html>

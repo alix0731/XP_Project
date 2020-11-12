@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste over film</title>
+    <link rel="stylesheet" href="MyCSS.css">
+</head>
+<body style="background-color: black; color: white">
+<h2>Liste over film</h2>
+<button type="button" id="backButton" onclick="tilbage()">Tilbage</button>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Varighed</th>
+        <th>Prisklasse</th>
+        <th>Genre</th>
+        <th>Skuespillere</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="m: ${movieList}">
+        <td th:text="${m.movie_id}"></td>
+        <td th:text="${m.title}"></td>
+        <td th:text="${m.duration}"></td>
+        <td th:text="${m.price_rank}"></td>
+        <td th:text="${m.genre}"></td>
+        <td th:text="${m.actors}"></td>
+        <td>
+            <a th:href="@{'/DeleteMovie/'+${m.movie_id}}">
+                <button type="button" id = "deleteButton"
+                        onclick = "return confirm('Er du sikker?')">
+                    Slet
+                </button>
+            </a>
+            <br />
+            <a th:href="@{'/UpdateMovie/'+${m.movie_id}}">
+                <button type="button" id = "editButton">
+                    Ændre
+                </button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    function tilbage() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>
