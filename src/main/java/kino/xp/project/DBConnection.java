@@ -27,6 +27,8 @@ public class DBConnection
             System.out.println("Connection created");
         } catch (Exception e) {
             System.out.println(e.toString());
+		System.out.println("Send fra nano command line");
+
         }
 
         return conn;
