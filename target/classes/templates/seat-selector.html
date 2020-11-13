@@ -64,14 +64,14 @@
                     <if th:if="${rowStat.last}">
                         <!-- luxery seats -->
                         <div class="button-blue"> <!-- red box -->
-                            <input type="button" th:id="${'95|'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
+                            <input type="button" th:id="${'95-'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
 
                         </div>
 
                     </if>
                     <else th:unless="${rowStat.last}">
                     <div class="button-green"> <!-- red box -->
-                        <input type="button" th:id="${'130|'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
+                        <input type="button" th:id="${'130-'+reservation.getSeat_nr()}" name="check" th:value="${reservation.getSeat_nr()}" th:onclick="clicked(this.id)">
 
                     </div>
                     </else>
