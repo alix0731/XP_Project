@@ -1,15 +1,21 @@
 pipeline{
-agent any
+agent {
 
-tools{
-maven "M3"
+docker{
+image "maven:3.6.0-jdk-13"
+label "docker"
 }
+}
+
+// tools{
+// maven "M3"
+// }
+
 
 stages{
 stage("Build") {
     steps {
     sh "fuser -n tcp -k 8081"
-
     sh "mvn -version"
     sh "mvn clean"
     sh "mvn package"
