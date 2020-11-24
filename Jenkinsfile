@@ -12,6 +12,7 @@ stage("Build") {
         sh "fuser -n tcp -k 8081"
         //sh "if fuser -n tcp -k 8081 then echo "port is not running" fi"
 
+        sh "echo 'Check'"
 
 
 
