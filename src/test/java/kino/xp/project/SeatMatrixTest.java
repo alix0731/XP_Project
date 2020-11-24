@@ -26,7 +26,7 @@ public class SeatMatrixTest
 
        SeatMatrix matrix = new SeatMatrix(1,  listOfReservationsForSpecificMovie);
 
-       Reservation[] firstRow = matrix.getMatrix().get(2); // gets the reservation at seat 1
+       Reservation[] firstRow = matrix.getMatrix().get(1); // gets the reservation at seat 1
 
 
 
