@@ -10,10 +10,9 @@ stage("Build") {
     steps {
     // stopper port 8080, hvor applicationen kører
         //sh "fuser -n tcp -k 8081"
-        sh "if fuser -n tcp -k 8081
-                            then
-                             echo 'port is not running'
-                            fi"
+        sh "if fuser -n tcp -k 8081 then echo 'port is not running' fi"
+
+                            
 
 
 
