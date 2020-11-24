@@ -8,7 +8,7 @@ maven "M3"
 stages{
 stage("Build") {
     steps {
-    sh "fuser -n tcp -k 8081"
+   // sh "fuser -n tcp -k 8081"
     sh "mvn -version"
     sh "mvn clean"
     sh "mvn package"
