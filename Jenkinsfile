@@ -9,7 +9,7 @@ stages{
 stage("Build") {
     steps {
     // stopper port 8080, hvor applicationen kører
-        sh "fuser -n tcp -k 8081"
+        //sh "fuser -n tcp -k 8081"
 
 // sletter den gamle jar file
          sh "mvn clean"
