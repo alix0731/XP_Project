@@ -8,28 +8,25 @@ maven "M3"
 stages{
 stage("Build") {
     steps {
-   sh "fuser -n tcp -k 8081"
+        sh "fuser -n tcp -k 8081"
 
-    sh "mvn clean"
-    sh "mvn package"
+         sh "mvn clean"
+        sh "mvn package"
 
     }
-
-
 }
 
 stage("Deploy"){
-    sh "java -jar target/project-0.0.1-SNAPSHOT.jar"
-steps{
-
-}
+    steps{
+        sh "java -jar target/project-0.0.1-SNAPSHOT.jar"
+    }
 }
 
 }
 
 post{
-always {
-cleanWs()
-}
+    always {
+        cleanWs()
+    }
 }
 }
